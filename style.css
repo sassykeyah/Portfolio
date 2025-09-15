@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    color: #222;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.name {
+    font-size: 6vh;
+    font-weight: bold;
+    color: #111;
+}
+
+.nav {
+    display: flex;
+    gap: 4rem;
+    padding: 2rem 6rem 0 2rem;
+}
+
+.nav a {
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 3vh
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    margin-top: 60vh;
+    margin-left: 2rem;
+}
+
+.hero h1 {
+    font-size: 7vw;
+    font-weight: bold;
+    color: #d67219;
+    line-height: 1;
+    margin: 0;
+   
+}
+
