@@ -1,6 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(ScrollTrigger);
 
+  // Fade out main title on scroll
+  gsap.to("#main-title", {
+    scrollTrigger: {
+      trigger: "#main-title",
+      start: "top top",
+      end: "bottom top",
+      scrub: true
+    },
+    opacity: 0,
+    y: -100,
+    duration: 1
+  });
+
   // Auto-scroll to paragraph when h1 leaves viewport
   ScrollTrigger.create({
     trigger: "#main-title",
