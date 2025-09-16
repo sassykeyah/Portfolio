@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
     duration: 1
   });
 
-  // Auto-scroll to paragraph when h1 leaves viewport
+  // Auto-scroll to paragraph when h1 leaves viewport, centering it in the viewport
   ScrollTrigger.create({
     trigger: "#main-title",
     start: "bottom top",
     onLeave: function() {
-      document.getElementById("main-paragraph").scrollIntoView({ behavior: "smooth" });
+      document.getElementById("main-paragraph").scrollIntoView({ behavior: "smooth", block: "center" });
     }
   });
 
@@ -34,5 +34,19 @@ document.addEventListener("DOMContentLoaded", function() {
     y: 100,
     scale: 0.8,
     duration: 1.2
+  });
+
+  // Animate each project layout in on scroll
+  gsap.utils.toArray('.project-layout').forEach(function(project) {
+    gsap.from(project, {
+      scrollTrigger: {
+        trigger: project,
+        start: 'top 90%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      y: 100,
+      duration: 1
+    });
   });
 });
