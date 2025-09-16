@@ -4,12 +4,15 @@ body {
     background: #f4f4f4;
     color: #222;
 }
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 2rem 0 2rem;
+    position: sticky;
+    top: 0;
+        /* max-width removed for full width */
+    z-index: 1000;
 }
 
 .name {
@@ -36,16 +39,38 @@ body {
 }
 
 .hero {
-    margin-top: 60vh;
+    margin-top: 30vh;
     margin-left: 2rem;
+    height: 100vh;
 }
 
 .hero h1 {
-    font-size: 7vw;
+    font-size: 15em;
     font-weight: bold;
     color: #d67219;
-    line-height: 1;
-    margin: 0;
+    
+    
    
 }
 
+.intro {
+    max-width: 800px;
+    height: 100vh;
+    margin: 12em auto 0 auto;
+    padding: 1em;
+    text-align: center;
+}
+
+.intro p {
+    color: #111;
+    font-size: 2em;
+    line-height: 1.5;
+    text-align: left;
+    margin: 30vh auto;
+   
+
+    border-radius: 4rem;
+   
+    padding: 2em;
+    
+}
