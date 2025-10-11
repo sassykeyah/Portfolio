@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Auto-scroll to intro on the user's first scroll event, but allow free scrolling after
   function autoScrollToIntro() {
     gsap.to(window, {
       duration: 0.8,
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
 
  
-// Animate each letter in .opacity-reveal on scroll using SplitText
+//SplitText
   const introSection = document.querySelector('.intro');
   const intro = document.querySelector('.opacity-reveal');
   if (introSection && intro) {
@@ -22,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
       scrollTrigger: {
         trigger: introSection,
         start: 'top top',
-        end: '+=400', // Pin for 400px scroll distance
+        end: '+=400', 
         scrub: true,
         pin: true,
         pinSpacing: true
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-  // Fade out main title on scroll
+ 
   gsap.to("#main-title", {
     scrollTrigger: {
       trigger: "#main-title",
@@ -49,9 +48,18 @@ document.addEventListener("DOMContentLoaded", function() {
     duration: 1
   });
 
-  
 
-  // Animate each project layout in on scroll
+  ScrollTrigger.create({
+    trigger: ".intro",
+    start: "top top",
+    end: "bottom top",
+    toggleClass: {
+      targets: [".name", ".nav a"],
+      className: "white-text"
+    }
+  });
+
+  
   gsap.utils.toArray('.project-layout').forEach(function(project) {
     gsap.from(project, {
       scrollTrigger: {

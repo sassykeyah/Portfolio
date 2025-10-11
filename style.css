@@ -46,6 +46,10 @@ body {
     text-decoration: underline;
 }
 
+.white-text {
+    color: white !important;
+}
+
 .hero {
     margin-top: 30vh;
     margin-left: 2rem;
@@ -91,7 +95,7 @@ max-width: 800px;
 /* Projects Section Layout */
 .projects {
     width: 100vw;
-    margin-top: 20em;
+    margin-top: 25em;
 }
 
 .project-layout {
@@ -128,17 +132,19 @@ max-width: 800px;
 
 .project-info h3 {
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: normal;
     margin: 0 0 1em 0;
 }
 
 .project-tags {
     display: flex;
-    gap: 2em;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
     margin-top: 1em;
 }
 
-.project-tag {
+.project-tag1 {
     padding: 0.5em 2em;
     border: 2px solid #111;
     border-radius: 4px;
@@ -147,4 +153,54 @@ max-width: 800px;
     
     color: #1a1a19;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.project-tag2 {
+    padding: 0.5em 2em;
+    border: 2px solid #111;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    
+    color: #1a1a19;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.contact {
+    padding: 2rem 2rem 0 2rem;
+    background: #2f4f1f;
+    min-height: 100vh;
+}
+
+.contact-page .header {
+    background: #2f4f1f;
+    
+}
+
+.contact-page .name,
+.contact-page .nav a {
+    color: #F7F1E5;
+
+}
+
+.contact h1 {
+    font-size: 6em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+     color: #F7F1E5;
+    
+}
+.contact p {
+    font-size: 10em;
+    font-weight: normal;
+    color: #F7F1E5;
+    margin-bottom: 0.5em;
+    margin-top: 4em;
+}
+
+.contact p a {
+    
+    color: #F7F1E5;
+    text-decoration: underline;
+    
 }
