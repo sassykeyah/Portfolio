@@ -66,6 +66,34 @@ document.addEventListener("DOMContentLoaded", function() {
   // Responsive refresh function
   function refreshResponsiveAnimations() {
     ScrollTrigger.refresh();
+    
+    // Re-evaluate screen size and apply header color changes accordingly
+    const introSectionForHeader = document.querySelector('.intro');
+    if (introSectionForHeader) {
+      const screenSize = getScreenSize();
+      
+      // Kill existing ScrollTriggers for header color changes
+      ScrollTrigger.getAll().forEach(trigger => {
+        if (trigger.vars && trigger.vars.toggleClass && 
+            trigger.vars.toggleClass.targets && 
+            trigger.vars.toggleClass.targets.includes('.name')) {
+          trigger.kill();
+        }
+      });
+      
+      // Only apply color change on desktop
+      if (screenSize === 'desktop') {
+        ScrollTrigger.create({
+          trigger: ".intro",
+          start: "top center",
+          end: "bottom center",
+          toggleClass: {
+            targets: [".name", ".nav a"],
+            className: "white-text"
+          }
+        });
+      }
+    }
   }
   
   // Listen for resize events and refresh animations
@@ -165,30 +193,29 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 
-  // Change header colors when scrolling to intro section (only on home page)
+  // Change header colors when scrolling to intro section (only on home page and only on desktop)
   const introSectionForHeader = document.querySelector('.intro');
   if (introSectionForHeader) {
-    // Simple color change: black at hero, white at intro for all devices
-    ScrollTrigger.create({
-      trigger: ".intro",
-      start: "top center",
-      end: "bottom center",
-      toggleClass: {
-        targets: [".name", ".nav a"],
-        className: "white-text"
-      }
-    });
+    const screenSize = getScreenSize();
+    
+    // Only apply color change on desktop - mobile/tablet have background already
+    if (screenSize === 'desktop') {
+      ScrollTrigger.create({
+        trigger: ".intro",
+        start: "top center",
+        end: "bottom center",
+        toggleClass: {
+          targets: [".name", ".nav a"],
+          className: "white-text"
+        }
+      });
+    }
   }
 
-  // Mobile header hide/show behavior with background
+  // Mobile header hide/show behavior 
   const screenSize = getScreenSize();
   if (screenSize === 'smallMobile' || screenSize === 'mobile') {
     const header = document.querySelector('.header');
-    
-    // Add background color to header on mobile
-    header.style.backgroundColor = '#F7F1E5';
-    header.style.zIndex = '9999';
-    header.style.borderBottom = '1px solid rgba(26, 26, 25, 0.1)';
     
     let lastScrollTop = 0;
     let ticking = false;
