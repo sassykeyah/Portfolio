@@ -21,6 +21,7 @@ body {
     top: 0;
         /* max-width removed for full width */
     z-index: 1000;
+    transition: transform 0.3s ease-in-out;
 }
 
 .name {
@@ -95,11 +96,94 @@ max-width: 800px;
 /* Projects Section Layout */
 .projects {
     width: 100vw;
-    margin-top: 25em;
+    margin-top: 8em;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-detail {
+    width: 100vw;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 2em;
+    padding: 0.8em 1.5em;
+    background: #2f4f1f;
+    color: #F7F1E5;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #1a2f0f;
+}
+
+.case-study {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.case-study-section {
+    margin-bottom: 3em;
+}
+
+.case-study-section h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: #2f4f1f;
+}
+
+.case-study-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.case-study-section ul {
+    margin: 1em 0;
+    padding-left: 1.5em;
+}
+
+.case-study-section li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 0.5em;
+}
+
+.project-link-button {
+    display: inline-block;
+    margin: 0.5em 1em 0.5em 0;
+    padding: 0.8em 1.5em;
+    background: #2f4f1f;
+    color: #F7F1E5;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.project-link-button:hover {
+    background: #1a2f0f;
 }
 
 .project-layout {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,21 +194,32 @@ max-width: 800px;
 }
 
 .project-image {
-    width: 80vw;
+    width: 100%;
     max-width: 900px;
-    height: 50vh;
+    height: auto;
+    min-height: 400px;
+    max-height: 600px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    object-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
 .project-info {
-    width: 80vw;
+    width: 100%;
     max-width: 900px;
     margin-top: 2em;
+    padding: 0 1em;
 }
 
 .project-info h2 {
+    text-decoration: underline;
     font-size: 2em;
     font-weight: bold;
     margin: 0 0 0.5em 0;
@@ -149,7 +244,7 @@ max-width: 800px;
     border: 2px solid #111;
     border-radius: 4px;
     font-size: 1.1em;
-    font-weight: bold;
+   
     
     color: #1a1a19;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -163,6 +258,37 @@ max-width: 800px;
     
     color: #1a1a19;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.project-tags h4 {
+    margin: 0 0 0.5em 0;
+    font-size: 1.2em;
+    color: #1a1a19;
+}
+
+.tech-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.tech-button {
+    padding: 0.4em 1em;
+    border: 2px solid #111;
+    border-radius: 20px;
+    background: transparent;
+    color: #1a1a19;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.tech-button:hover {
+    background: #1a1a19;
+    color: #F7F1E5;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .contact {

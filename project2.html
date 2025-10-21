@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project 2 - Saskia Day Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sep3hls.css">
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/SplitText.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="name">Project 2 - Spotify Rewind</div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="project-detail">
+        <a href="index.html#projects" class="back-button">← Back to Projects</a>
+        
+        <!-- Hero Section -->
+        <div class="project-layout">
+            <img src="assets/Spotify Rewind Home.png" alt="Project Image" class="project-image">
+           
+      
+
+        <!-- Case Study Content -->
+        <div class="case-study">
+            <section class="case-study-section">
+                <h3>Project Overview</h3>
+                <p>Spotify Rewind is an interactive web application targeted at music enthusiasts and the general population who are interested in the connections between music and Australia's history. It aims to provide an engaging way to explore significant historical events the highest charting ARIA songs from the corrosponding years.</p>
+            </section>
+
+            <section class="case-study-section">
+                <h3>The Challenge</h3>
+                <p>A highly technical project, it required addressing these challenges:</p>
+                <ul>
+                    <li>Successful integration of Spotify's API using Vue.js and cURL</li>
+                    <li>Understand the target user and what they would like to gain from the experience.</li>
+                    <li>Depict over 15 key events in Australia’s history with corresponding ARIA top song of the year.</li>
+                    <li>Ensure web application is responsive to all device sizes.</li>
+                </ul>
+            </section>
+
+            <section class="case-study-section">
+                   <h3>My Solution</h3>
+                <p>My solution focused on creating an interactive, horizontal timeline that allows the user to scroll and click on each event:</p>
+                <ul>
+                    <li><strong>Concept Ideation:</strong> Explored the NMAS timeline of important events in Australia's history and correlated them with the top ARIA songs from those years.</li>
+                    <li><strong>Design Choices:</strong> Retro design choices to envoke a sense of nostalgia, use of an animating backrground (referencing all those cool 80's shapes we all love!)</li>
+                    <li><strong>Technical Implementation:</strong> Integration of cURL to authenticate and fetch data from Spotify's API, and Vue.js to build a dynamic and responsive user interface.</li>
+                </ul>
+            </section>
+
+            <section class="case-study-section">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Horizontal timeline, it allows users to scroll through Australia's history in a chronological manner and the relevant music.</li>
+                    <li>Showcases key historical events alongside their corresponding top ARIA songs, providing context and enhancing user engagement. Implemented a 'details' page for further exploration.</li>
+                    <li>Abilities to click a button to navigate directly to the spotify webplayer to listen to the selected songs.</li>
+                </ul>
+            </section>
+
+
+            <section class="case-study-section">
+                <h3>View Project</h3>
+                <a href="https://sassykeyah.github.io/SpotifyRewind/" class="project-link-button">Visit Live Site</a>
+                <a href="https://github.com/sassykeyah/SpotifyRewind" class="project-link-button">View Code on GitHub</a>
+            </section>
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>
