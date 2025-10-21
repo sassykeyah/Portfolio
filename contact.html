@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/SplitText.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
-    <script src="script.js"></script>
+     <script src="script.js"></script>
 </head>
 <body class="contact-page">
     <div class="header">
@@ -22,7 +22,20 @@
         </div>
     </div>
     <div class="contact">
-        <p><a href="mailto:saskiaday@hotmail.com">saskiaday@hotmail.com</a></p>
+        <h1>I'm always open to discussing new projects or opportunities.</h1>
+        <h1>Send me a message!</h1>
+        <div class="email-container" id="email-hover-area">
+            <a href="mailto:saskiaday@hotmail.com" id="email-link" title="Send email to saskiaday@hotmail.com">
+                <svg viewBox="0 0 1400 350" width="1400" height="350">
+                    <path id="email-path" d="M 70,175 Q 700,175 1330,175" />
+                    <text class="email-text">
+                        <textPath href="#email-path" startOffset="50%" text-anchor="middle">
+                            <tspan dy="0">saskiaday@hotmail.com</tspan>
+                        </textPath>
+                    </text>
+                </svg>
+            </a>
+        </div>
     </div>
 </body>
 </html>

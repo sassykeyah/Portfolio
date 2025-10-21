@@ -21,7 +21,17 @@ body {
     top: 0;
         /* max-width removed for full width */
     z-index: 1000;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+/* Ensure contact page header is always green */
+body.contact-page .header {
+    background: #2f4f1f !important;
+}
+
+body.contact-page .name,
+body.contact-page .nav a {
+    color: #F7F1E5 !important;
 }
 
 .name {
@@ -292,36 +302,48 @@ max-width: 800px;
 }
 
 .contact {
-    padding: 2rem 2rem 0 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     background: #2f4f1f;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
 }
 
 .contact-page .header {
-    background: #2f4f1f;
+    background: #2f4f1f !important;
     
 }
 
 .contact-page .name,
 .contact-page .nav a {
-    color: #F7F1E5;
+    color: #F7F1E5 !important;
 
 }
 
 .contact h1 {
     font-size: 6em;
     font-weight: bold;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-     color: #F7F1E5;
+    margin-bottom: 0.1em;
+    margin-top: 0.4em;
+    color: #F7F1E5;
+    line-height: 1.1;
     
+}
+
+.contact h1:last-of-type {
+    margin-top: 0em;
+    margin-bottom: 0.6em;
 }
 .contact p {
     font-size: 10em;
     font-weight: normal;
     color: #F7F1E5;
     margin-bottom: 0.5em;
-    margin-top: 4em;
+    margin-top: 1em;
+    line-height: 1.1;
 }
 
 .contact p a {
@@ -329,4 +351,524 @@ max-width: 800px;
     color: #F7F1E5;
     text-decoration: underline;
     
+}
+
+/* Email SVG Animation Styles */
+.email-container {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+#email-link {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+#email-link svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: all;
+}
+
+#email-path {
+    fill: none;
+    stroke: transparent;
+    stroke-width: 2;
+}
+
+.email-text {
+    font-family: "degular-display", sans-serif;
+    font-size: 8em;
+    font-weight: normal;
+    fill: #F7F1E5;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+    dominant-baseline: central;
+    pointer-events: all;
+}
+
+/* CSS fallback hover effect */
+#email-link:hover .email-text {
+    fill: #F7F1E5;
+    filter: brightness(1.1);
+}
+
+#email-link:hover .email-text {
+    fill: #F7F1E5;
+}
+
+
+/* Laptop breakpoint: 1024px and below */
+@media screen and (max-width: 1024px) {
+    
+    /* Header adjustments */
+    .header {
+        padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+    
+    .name {
+        font-size: 5vh;
+    }
+    
+    .nav {
+        gap: 2rem;
+        padding: 1.5rem 3rem 0 1.5rem;
+    }
+    
+    .nav a {
+        font-size: 2.5vh;
+    }
+    
+    /* Hero section */
+    .hero {
+        margin-top: 20vh;
+        margin-left: 1.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 15em;
+    }
+    
+    /* Intro section */
+    .intro {
+        max-width: 700px;
+        margin-top: 20em;
+        padding: 0.8em;
+    }
+    
+    .intro p {
+        font-size: 1.8em;
+        padding: 1.8em;
+    }
+    
+    /* Project layouts */
+    .project-layout {
+        height: auto;
+        padding-top: 1.5em;
+    }
+    
+    .project-image {
+        max-width: 800px;
+        min-height: 350px;
+        max-height: 500px;
+    }
+    
+    .project-info {
+        max-width: 800px;
+        margin-top: 1.5em;
+    }
+    
+    .project-info h2 {
+        font-size: 1.8em;
+    }
+    
+    .project-info h3 {
+        font-size: 1.2em;
+    }
+    
+    /* Contact section */
+    .contact {
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    
+    .contact h1 {
+        font-size: 5em;
+        line-height: 1.1;
+        margin-bottom: 0.1em;
+        margin-top: 0.2em;
+    }
+    
+    .contact h1:last-of-type {
+        margin-top: 0em;
+        margin-bottom: 0.4em;
+    }
+    
+    .contact p {
+        font-size: 6em;
+        margin-top: 0.4em;
+        line-height: 1.2;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+    
+    /* Email SVG responsive styles */
+    .email-container {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .email-text {
+        font-size: 6em;
+    }
+    
+    #email-link svg {
+        width: 1200px;
+        height: 300px;
+    }
+}
+
+/* Mobile breakpoint: 768px and below */
+@media screen and (max-width: 768px) {
+    
+    /* Header adjustments */
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .name {
+        font-size: 4vh;
+        align-self: flex-start;
+    }
+    
+    .nav {
+        gap: 1.5rem;
+        padding: 0;
+        justify-content: flex-start;
+        align-self: flex-start;
+    }
+    
+    .nav a {
+        font-size: 2vh;
+    }
+    
+    /* Contact page header for mobile */
+    .contact-page .header {
+        background: #2f4f1f !important;
+    }
+    
+    .contact-page .name,
+    .contact-page .nav a {
+        color: #F7F1E5 !important;
+    }
+    
+    /* Hero section */
+    .hero {
+        margin-top: 15vh;
+        margin-left: 1rem;
+        height: auto;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 8em;
+        line-height: 0.9;
+    }
+    
+    /* Intro section */
+    .intro {
+        max-width: 90%;
+        margin-top: 10em;
+        padding: 0.5em;
+        height: auto;
+    }
+    
+    .intro p {
+        font-size: 1.4em;
+        padding: 1.5em;
+        border-radius: 2rem;
+        margin: 10vh auto;
+    }
+    
+    /* Project layouts */
+    .projects {
+        margin-top: 8em;
+    }
+    
+    .project-layout {
+        height: auto;
+        padding: 1rem;
+        margin-bottom: 7rem;
+    }
+    
+    .project-image {
+        max-width: 100%;
+        min-height: 250px;
+        max-height: 400px;
+    }
+    
+    .project-info {
+        max-width: 100%;
+        margin-top: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .project-info h2 {
+        font-size: 1.5em;
+    }
+    
+    .project-info h3 {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+    
+    .tech-buttons {
+        gap: 0.3em;
+    }
+    
+    .tech-button {
+        font-size: 0.8em;
+        padding: 0.3em 0.8em;
+    }
+    
+    .project-tag1,
+    .project-tag2 {
+        padding: 0.4em 1.5em;
+        font-size: 1em;
+    }
+    
+    /* Contact section */
+    .contact {
+        padding: 0.5rem 1rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    
+    .contact h1 {
+        font-size: 3em;
+        line-height: 1.1;
+        margin-bottom: 0.1em;
+        margin-top: 0.2em;
+    }
+    
+    .contact h1:last-of-type {
+        margin-top: 0em;
+        margin-bottom: 0.3em;
+    }
+    
+    .contact p {
+        font-size: 2.5em;
+        margin-top: 0.3em;
+        line-height: 1.2;
+        word-break: break-all;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+    
+    /* Email SVG responsive styles */
+    .email-container {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .email-text {
+        font-size: 7em;
+    }
+    
+    #email-link svg {
+        width: 900px;
+        height: 225px;
+    }
+    
+    /* Case study pages */
+    .case-study {
+        padding: 1rem;
+    }
+    
+    .case-study-section h3 {
+        font-size: 1.3em;
+    }
+    
+    .case-study-section p,
+    .case-study-section li {
+        font-size: 1em;
+    }
+    
+    .back-button,
+    .project-link-button {
+        padding: 0.6em 1.2em;
+        font-size: 0.9em;
+    }
+}
+
+/* Small Mobile breakpoint: 425px and below */
+@media screen and (max-width: 425px) {
+    
+    /* Header adjustments for very small screens */
+    .header {
+        padding: 0.8rem;
+        gap: 0.8rem;
+    }
+    
+    .name {
+        font-size: 3.5vh;
+    }
+    
+    .nav {
+        gap: 1rem;
+    }
+    
+    .nav a {
+        font-size: 1.8vh;
+    }
+    
+    /* Contact page header for small mobile */
+    .contact-page .header {
+        background: #2f4f1f !important;
+    }
+    
+    .contact-page .name,
+    .contact-page .nav a {
+        color: #F7F1E5 !important;
+    }
+    
+    /* Hero section for small screens */
+    .hero {
+        margin-top: 12vh;
+        margin-left: 0.8rem;
+    }
+    
+    .hero h1 {
+        font-size: 5em;
+        line-height: 0.8;
+    }
+    
+    /* Intro section */
+    .intro {
+        max-width: 95%;
+        margin-top: 8em;
+        padding: 0.3em;
+    }
+    
+    .intro p {
+        font-size: 1.2em;
+        padding: 1.2em;
+        border-radius: 1.5rem;
+        margin: 8vh auto;
+    }
+    
+    /* Project layouts for very small screens */
+    .projects {
+        margin-top: 4em;
+    }
+    
+    .project-layout {
+        padding: 0.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .project-image {
+        min-height: 200px;
+        max-height: 300px;
+    }
+    
+    .project-info {
+        padding: 0 0.3rem;
+    }
+    
+    .project-info h2 {
+        font-size: 1.3em;
+        line-height: 1.3;
+    }
+    
+    .project-info h3 {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+    
+    .tech-buttons {
+        gap: 0.2em;
+    }
+    
+    .tech-button {
+        font-size: 0.7em;
+        padding: 0.25em 0.6em;
+    }
+    
+    .project-tag1,
+    .project-tag2 {
+        padding: 0.3em 1.2em;
+        font-size: 0.9em;
+    }
+    
+    /* Contact section for small screens */
+    .contact {
+        padding: 0.3rem 0.8rem 0.8rem 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    
+    .contact h1 {
+        font-size: 2em;
+        line-height: 1.1;
+        margin-bottom: 0.05em;
+        margin-top: 0.1em;
+    }
+    
+    .contact h1:last-of-type {
+        margin-top: 0em;
+        margin-bottom: 0.2em;
+    }
+    
+    .contact p {
+        font-size: 1.8em;
+        margin-top: 0.2em;
+        line-height: 1.1;
+        word-break: break-all;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    /* Email SVG responsive styles */
+    .email-container {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .email-text {
+        font-size: 7em;
+    }
+    
+    #email-link svg {
+        width: 600px;
+        height: 150px;
+    }
+    
+    /* Case study pages */
+    .case-study {
+        padding: 0.8rem;
+    }
+    
+    .case-study-section h3 {
+        font-size: 1.2em;
+    }
+    
+    .case-study-section p,
+    .case-study-section li {
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+    
+    .back-button,
+    .project-link-button {
+        padding: 0.5em 1em;
+        font-size: 0.85em;
+        margin: 0.3em 0.5em 0.3em 0;
+    }
 }
