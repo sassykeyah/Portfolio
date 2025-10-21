@@ -764,6 +764,8 @@ body.contact-page .nav a {
         min-height: 250px;
         max-height: 500px;
         margin-bottom: 2em;
+        object-fit: cover;
+        object-position: center;
     }
     
     .case-study {
