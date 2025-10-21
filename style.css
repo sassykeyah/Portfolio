@@ -1029,6 +1029,7 @@ body.contact-page .nav a {
         max-height: 350px;
         margin-bottom: 1.5em;
         border-radius: 8px;
+        margin-right: 2em;
         width: 100%;
         object-fit: cover;
         object-position: center;
