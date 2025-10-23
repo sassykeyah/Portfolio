@@ -84,7 +84,7 @@ body.contact-page .nav a {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    margin-top: 30vh;
+    margin-top: 20vh;
     margin-left: 2rem;
     height: 100vh;
 }
@@ -460,7 +460,7 @@ body.contact-page .nav a {
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* ===== LAPTOP BREAKPOINT: 1024px and below ===== */
-@media screen and (max-width: 1029px) {
+@media screen and (max-width: 1444px) {
     /* Header */
     .header {
         
@@ -489,7 +489,7 @@ body.contact-page .nav a {
     }
     
     .hero h1 {
-        font-size: 10em;
+        font-size: 6em;
     }
     
     /* Intro */
