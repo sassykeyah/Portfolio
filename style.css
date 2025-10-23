@@ -487,6 +487,9 @@ body.contact-page .nav a {
         margin-top: 5vh;
         margin-left: 1.5rem;
     }
+    .hero h1 {
+        font-size: clamp(12em, 10vw, 15em);
+    }
     
     /* Intro */
     .intro {
