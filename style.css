@@ -90,7 +90,7 @@ body.contact-page .nav a {
 }
 
 .hero h1 {
-    font-size: 20em;
+    font-size: clamp(8em, 12vw, 20em);
     font-weight: bold;
     color: var(--secondary-color);
 }
@@ -486,10 +486,6 @@ body.contact-page .nav a {
     .hero {
         margin-top: 5vh;
         margin-left: 1.5rem;
-    }
-    
-    .hero h1 {
-        font-size: 6em;
     }
     
     /* Intro */
