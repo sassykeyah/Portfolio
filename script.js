@@ -4,10 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
   
-
   // RESPONSIVE DESIGN SYSTEM FOR GSAP ANIMATIONS
-
-  
   const BREAKPOINTS = {
     smallMobile: 475,
     mobile: 768,
@@ -63,38 +60,38 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
   
+  // Ensure header has consistent styling on all screen sizes
+  function ensureHeaderStyling() {
+    const header = document.querySelector('.header');
+    const name = document.querySelector('.name');
+    const navLinks = document.querySelectorAll('.nav a');
+    
+    if (header && !document.body.classList.contains('contact-page')) {
+      // Always ensure header has background and dark text on all screen sizes
+      header.style.background = 'var(--light-color)';
+      
+      
+      // Ensure text is always dark (remove any white-text classes)
+      if (name) {
+        name.classList.remove('white-text');
+        name.style.color = 'var(--primary-color)';
+      }
+      
+      navLinks.forEach(link => {
+        link.classList.remove('white-text');
+        link.style.color = 'var(--primary-color)';
+      });
+    }
+  }
+  
   // Responsive refresh function
   function refreshResponsiveAnimations() {
     ScrollTrigger.refresh();
-    
-    // Re-evaluate screen size and apply header color changes accordingly
-    const introSectionForHeader = document.querySelector('.intro');
-    if (introSectionForHeader) {
-      const screenSize = getScreenSize();
-      
-      // Kill existing ScrollTriggers for header color changes
-      ScrollTrigger.getAll().forEach(trigger => {
-        if (trigger.vars && trigger.vars.toggleClass && 
-            trigger.vars.toggleClass.targets && 
-            trigger.vars.toggleClass.targets.includes('.name')) {
-          trigger.kill();
-        }
-      });
-      
-      // Only apply color change on desktop
-      if (screenSize === 'desktop') {
-        ScrollTrigger.create({
-          trigger: ".intro",
-          start: "top center",
-          end: "bottom center",
-          toggleClass: {
-            targets: [".name", ".nav a"],
-            className: "white-text"
-          }
-        });
-      }
-    }
+    ensureHeaderStyling(); // Always maintain consistent header styling
   }
+  
+  // Initialize header styling immediately
+  ensureHeaderStyling();
   
   // Listen for resize events and refresh animations
   let resizeTimeout;
@@ -192,26 +189,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-
-  // Change header colors when scrolling to intro section (only on home page and only on desktop)
-  const introSectionForHeader = document.querySelector('.intro');
-  if (introSectionForHeader) {
-    const screenSize = getScreenSize();
-    
-    // Only apply color change on desktop - mobile/tablet have background already
-    if (screenSize === 'desktop') {
-      ScrollTrigger.create({
-        trigger: ".intro",
-        start: "top center",
-        end: "bottom center",
-        toggleClass: {
-          targets: [".name", ".nav a"],
-          className: "white-text"
-        }
-      });
-    }
-  }
-
   // Mobile header hide/show behavior 
   const screenSize = getScreenSize();
   if (screenSize === 'smallMobile' || screenSize === 'mobile') {
@@ -278,39 +255,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', requestTick);
   }
   
-  // ==========================================================================
-  // RESPONSIVE DESIGN RULE AND DOCUMENTATION
-  // ==========================================================================
-  
-  /*
-  RESPONSIVE DESIGN RULE FOR GSAP/JAVASCRIPT:
-  
-  1. ALL new animations must use getResponsiveValues() function
-  2. Define responsive values in the getResponsiveValues() switch statement
-  3. Test animations on all four breakpoints: small mobile (≤475px), mobile (≤768px), laptop (≤1024px), desktop (>1024px)
-  4. Use consistent breakpoint values that match CSS media queries
-  5. Consider performance on mobile devices - reduce complex animations if needed
-  6. Always include ScrollTrigger.refresh() for resize events
-  7. Responsive values to consider:
-     - Animation distances (y, x transforms)
-     - Duration and timing
-     - Stagger values for text animations
-     - Trigger points and thresholds
-     - Pin spacing and offsets
-  
-  IMPLEMENTATION CHECKLIST:
-  ☐ Define responsive values in getResponsiveValues()
-  ☐ Use values object instead of hardcoded numbers
-  ☐ Test on small mobile, mobile, laptop, and desktop
-  ☐ Ensure smooth resize behavior
-  ☐ Check performance on lower-end devices
-  
-  BREAKPOINTS:
-  - Small Mobile: ≤475px (Minimal animations, optimized for very small screens)
-  - Mobile: ≤768px (Touch-first, simplified animations)
-  - Laptop: ≤1024px (Medium complexity, moderate values)
-  - Desktop: >1024px (Full complexity, optimal experience)
-  */
+ 
 
   // Email SVG Animation for Contact Page
   console.log("Looking for email elements...");

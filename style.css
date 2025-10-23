@@ -283,8 +283,7 @@ body.contact-page .nav a {
     width: 100%;
     max-width: 1200px;
     height: auto;
-    min-height: 400px;
-    max-height: 700px;
+    aspect-ratio: 16/9;
     object-fit: cover;
     object-position: center;
     border-radius: var(--border-radius-medium);
@@ -761,9 +760,8 @@ body.contact-page .nav a {
     /* Case study pages */
     .case-study-image {
         max-width: 100%;
-        min-height: 250px;
-        max-height: 500px;
-        margin-bottom: 2em;
+        aspect-ratio: 4/3;
+        margin-bottom: 1.5em;
         object-fit: cover;
         object-position: center;
     }
@@ -790,6 +788,8 @@ body.contact-page .nav a {
     
     /* Footer */
     .footer {
+        background-color: var(--primary-color);
+        color: var(--light-color);
         padding: 2rem 1rem 1.5rem 1rem;
         margin-top: 0;
     }
@@ -1013,37 +1013,36 @@ body.contact-page .nav a {
     
     /* Case study pages */
     .project-detail {
-        padding: 0.5rem 0.8rem 0.5rem 0.5rem;
-        margin-top: 1em;
+        padding: 0.5rem 0.5rem;
+        margin-top: 0.5em;
     }
     
     .case-study-hero {
         margin-bottom: 1em;
         padding: 0;
         width: 100%;
-        overflow: hidden;
     }
-    
+
     .case-study-image {
-        min-height: 180px;
-        max-height: 350px;
-        margin-bottom: 1.5em;
+        aspect-ratio: 3/2;
+        margin-bottom: 1em;
         border-radius: 8px;
-        margin-right: 2em;
         width: 100%;
         object-fit: cover;
         object-position: center;
     }
-    
+
     .case-study {
-        width: 96%;
-        padding: 0.8em 1.2em 0.8em 0.8em;
+        width: 95%;
+        padding: 1em 0.5em 0.8em 0.5em;
         margin: 0.5em auto 2em auto;
+    }
     }
     
     .case-study-section {
-        margin-bottom: 1.5em;
-        padding: 0 0.5em 0 0.2em;
+        margin-bottom: 1.2em;
+        padding: 0;
+        text-align: left;
     }
     
     .case-study-section h3 {
@@ -1091,18 +1090,20 @@ body.contact-page .nav a {
     
     .back-button,
     .project-link-button {
-        padding: 0.3em 0.6em;
-        font-size: clamp(0.7em, 3vw, 0.8em);
-        margin: 0.15em 0.2em 0.15em 0;
+        padding: 0.4em 0.8em;
+        font-size: clamp(0.8em, 3.5vw, 1em);
+        margin: 0.2em 0.3em 0.2em 0;
         word-break: break-word;
         overflow-wrap: break-word;
-        border-radius: 3px;
+        border-radius: 4px;
         display: inline-block;
         text-align: center;
     }
     
     /* Footer */
     .footer {
+        background-color: var(--primary-color);
+        color: var(--light-color);
         padding: 1.5rem 0.8rem 1rem 0.8rem;
         margin-top: 0;
     }
@@ -1118,7 +1119,7 @@ body.contact-page .nav a {
     .footer-info p {
         font-size: 0.85em;
     }
-}
+
 
 
 .footer {
