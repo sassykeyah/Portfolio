@@ -460,7 +460,7 @@ body.contact-page .nav a {
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* ===== LAPTOP BREAKPOINT: 1024px and below ===== */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1029px) {
     /* Header */
     .header {
         
