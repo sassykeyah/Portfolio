@@ -492,13 +492,13 @@ body.contact-page .nav a {
     
     /* Intro */
     .intro {
-        max-width: 700px;
+        max-width: 900px;
         margin-top: 20em;
         padding: 0.8em;
     }
     
     .intro p {
-        font-size: 1.8em;
+        font-size: 3em;
         padding: 1.8em;
     }
     
