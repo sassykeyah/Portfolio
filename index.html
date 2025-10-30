@@ -16,31 +16,33 @@
 </head>
 
 <body>
-    <div class="header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
         <div class="name">Saskia Day</div>
-        <div class="nav">
+        <nav class="nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="contact.html">Contact</a>
-        </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <h1 class="animate-me" id="main-title">
+      UX / UI<br>
+     Designer
+    </h1>
+        </section>
+        <div class="background">
+            <section class="intro">
+                <p class="animate-me opacity-reveal" id="main-paragraph">
+
+    I believe good design starts by listening, that design is a conversation. With a BDes in Interaction Design and strong interest in designing for accessibility, I create digital experiences that are clear, usable and are inclusive for all.
+
+                </p>
+            </section>
     </div>
-
-    <div class="hero">
-        <h1 class="animate-me" id="main-title">
-  UX / UI<br>
- Designer
-</h1>
-    </div>
-    <div class="background">
-        <div class="intro">
-            <p class="animate-me opacity-reveal" id="main-paragraph">
-
-I believe good design starts by listening, that design is a conversation. With a BDes in Interaction Design and strong interest in designing for accessibility, I create digital experiences that are clear, usable and are inclusive for all.
-
-            </p>
-        </div>
-</div>
-        <!-- Projects Section -->
-        <div class="projects" id="projects">
+            <!-- Projects Section -->
+            <section class="projects" id="projects" aria-label="Portfolio projects">
             <a href="project1.html" class="project-link">
                 <div class="project-layout">
                     <img src="assets/SaskiaDay_Project1_001 .png" alt="Collation of screenshots showing the 404: Page Not Found project" class="project-image">
@@ -49,11 +51,11 @@ I believe good design starts by listening, that design is a conversation. With a
                         <h3>Lost in a world of 404, you must find the 302. 404NotFound explores digital disconnection as a metaphor for rediscovery. Created for the UC 24hr Design Challenge, it navigates the prompt of "lost and found". It is structured as an interactive narrative, with the user clicking and scrolling to reveal information. </h3>
                         <div class="project-tags">
                             <h4><strong>TECHNOLOGIES</strong></h4>
-                            <div class="tech-buttons">
-                                <button class="tech-button">Green Sock Animation Platform</button>
-                                <button class="tech-button">JavaScript</button>
-                                <button class="tech-button">GitHub Pages</button>
-                                <button class="tech-button">Figma</button>
+                            <div class="tech-buttons" role="list" aria-label="Technologies used">
+                                <span class="tech-button" role="listitem">Green Sock Animation Platform</span>
+                                <span class="tech-button" role="listitem">JavaScript</span>
+                                <span class="tech-button" role="listitem">GitHub Pages</span>
+                                <span class="tech-button" role="listitem">Figma</span>
                             </div>
                         </div>
                     </div>
@@ -67,12 +69,12 @@ I believe good design starts by listening, that design is a conversation. With a
                         <h3>A trip through Australia's most significant historical moments, and the most popular songs from that year. From the 1956 Melbourne Olympics to the 2023 Voice to Parliament referendum, discover how our nations story can be emulated through the connection of music and history. </h3>
                         <div class="project-tags">
                             <h4><strong>TECHNOLOGIES</strong></h4>
-                            <div class="tech-buttons">
-                                <button class="tech-button">Spotify API</button>
-                                <button class="tech-button">cURL</button>
-                                <button class="tech-button">Vue.js</button>
-                                <button class="tech-button">GitHub Pages</button>
-                                <button class="tech-button">Figma</button>
+                            <div class="tech-buttons" role="list" aria-label="Technologies used">
+                                <span class="tech-button" role="listitem">Spotify API</span>
+                                <span class="tech-button" role="listitem">cURL</span>
+                                <span class="tech-button" role="listitem">Vue.js</span>
+                                <span class="tech-button" role="listitem">GitHub Pages</span>
+                                <span class="tech-button" role="listitem">Figma</span>
                             </div>
                         </div>
                     </div>
@@ -86,17 +88,18 @@ I believe good design starts by listening, that design is a conversation. With a
                         <h3>A commission for the parliamentary education office for the production of tactile maps for individuals with a vision impairment to better understand the layout of the two chambers.</h3>
                         <div class="project-tags">
                             <h4><strong>TECHNOLOGIES</strong></h4>
-                            <div class="tech-buttons">
-                                <button class="tech-button">Swell Paper</button>
-                                <button class="tech-button">PIAF (Picture in a Flash) Machines</button>
-                                <button class="tech-button">Adobe Illustrator</button>
+                            <div class="tech-buttons" role="list" aria-label="Technologies used">
+                                <span class="tech-button" role="listitem">Swell Paper</span>
+                                <span class="tech-button" role="listitem">PIAF (Picture in a Flash) Machines</span>
+                                <span class="tech-button" role="listitem">Adobe Illustrator</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
             
-        </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer-content">

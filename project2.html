@@ -16,24 +16,25 @@
 </head>
 
 <body>
-    <div class="header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
         <div class="name">Project 2 - Spotify Rewind</div>
-        <div class="nav">
+        <nav class="nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <div class="project-detail">
+    <main id="main-content" class="project-detail">
         
         
         <!-- Hero Section -->
-        <div class="case-study-hero">
-            <img src="assets/Spotify Rewind Home.png" alt="Project Image" class="case-study-image">
-        </div>
-<a href="index.html#projects" class="back-button">← Back to Projects</a>
+        <section class="case-study-hero" aria-label="Project hero image">
+            <img src="assets/Spotify Rewind Home.png" alt="Spotify Rewind homepage showing an interactive timeline of Australian historical events with retro 80s-style design and animated background shapes" class="case-study-image">
+        </section>
+        <a href="index.html#projects" class="back-button" aria-label="Go back to projects section">← Back to Projects</a>
         <!-- Case Study Content -->
-        <div class="case-study">
+        <article class="case-study" role="main" aria-label="Project case study">
             <section class="case-study-section">
                 <h3>Project Overview</h3>
                 <p>Spotify Rewind is an interactive web application targeted at music enthusiasts and the general population who are interested in the connections between music and Australia's history. It aims to provide an engaging way to explore significant historical events the highest charting ARIA songs from the corrosponding years.</p>
@@ -75,8 +76,8 @@
                 <a href="https://sassykeyah.github.io/SpotifyRewind/" class="project-link-button">Visit Live Site</a>
                 <a href="https://github.com/sassykeyah/SpotifyRewind" class="project-link-button">View Code on GitHub</a>
             </section>
-        </div>
-    </div>
+        </article>
+    </main>
 
 <footer class="footer">
     <div class="footer-content">

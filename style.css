@@ -26,6 +26,42 @@ body {
     color: var(--primary-color);
 }
 
+/* ===== ACCESSIBILITY STYLES ===== */
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1001;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Focus indicators */
+a:focus,
+button:focus,
+[tabindex]:focus {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Ensure focus is visible on interactive elements */
+.nav a:focus,
+.project-link:focus,
+.back-button:focus,
+.project-link-button:focus {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
 .opacity-reveal {
     color: var(--light-color);
 }

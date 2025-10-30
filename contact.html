@@ -14,20 +14,22 @@
      <script src="script.js"></script>
 </head>
 <body class="contact-page">
-    <div class="header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
         <div class="name">Let's Connect</div>
-        <div class="nav">
+        <nav class="nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    <div class="contact">
+            <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+    </header>
+    <main id="main-content" class="contact">
         
         <h1>I'm always open to discussing new projects or opportunities.</h1>
         <h1>Send me a message!</h1>
-        <div class="email-container" id="email-hover-area">
-            <a href="mailto:saskiaday@hotmail.com" id="email-link" title="Send email to saskiaday@hotmail.com">
-                <svg viewBox="0 0 1400 350" width="1400" height="350">
+        <div class="email-container" id="email-hover-area" role="region" aria-label="Contact information">
+            <a href="mailto:saskiaday@hotmail.com" id="email-link" title="Send email to saskiaday@hotmail.com" aria-label="Send email to Saskia Day">
+                <svg viewBox="0 0 1400 350" width="1400" height="350" role="img" aria-labelledby="email-svg-title">
+                    <title id="email-svg-title">Email address: saskiaday@hotmail.com</title>
                     <path id="email-path" d="M 70,175 Q 700,175 1330,175" />
                     <text class="email-text">
                         <textPath href="#email-path" startOffset="50%" text-anchor="middle">
@@ -39,7 +41,7 @@
             
         </div>
        
-    </div>
+    </main>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-nav">

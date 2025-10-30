@@ -16,24 +16,25 @@
 </head>
 
 <body>
-    <div class="header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
         <div class="name">Saskia Day</div>
-        <div class="nav">
+        <nav class="nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <div class="project-detail">
+    <main id="main-content" class="project-detail">
         
         
         <!-- Hero Section -->
-        <div class="case-study-hero">
-            <img src="assets/Project 2 - Tactile Maps.png" alt="Tactile Maps Project Page Image" class="case-study-image">
-        </div>
-<a href="index.html#projects" class="back-button">← Back to Projects</a>
+        <section class="case-study-hero" aria-label="Project hero image">
+            <img src="assets/Project 2 - Tactile Maps.png" alt="Tactile maps showing raised textures and braille labels for the House of Representatives and Senate chambers layout, designed for vision-impaired users" class="case-study-image">
+        </section>
+        <a href="index.html#projects" class="back-button" aria-label="Go back to projects section">← Back to Projects</a>
         <!-- Case Study Content -->
-        <div class="case-study">
+        <article class="case-study" role="main" aria-label="Project case study">
             <section class="case-study-section">
                 <h3>Project Overview</h3>
                 <p>A commission for the Parliamentary Education Office of Australia. The goal was to create tactile resources that showcase the layout of the two chambers for individuals who are vision impaired</p>
@@ -72,8 +73,8 @@
 
            
             
-        </div>
-            </div>
+        </article>
+    </main>
 
 <footer class="footer">
     <div class="footer-content">

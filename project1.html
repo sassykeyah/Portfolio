@@ -16,24 +16,25 @@
 </head>
 
 <body>
-    <div class="header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
         <div class="name">Project 1 - UC 24hr Design Challenge '404: Page Not Found'</div>
-        <div class="nav">
+        <nav class="nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <div class="project-detail">
+    <main id="main-content" class="project-detail">
         
         <!-- Hero Section -->
-        <div class="case-study-hero">
-            <img src="assets/SaskiaDay_Project1_001 .png" alt="Collation of screenshots showing the 404: Page Not Found project" class="case-study-image">
-        </div>
-<a href="index.html#projects" class="back-button">← Back to Projects</a>
+        <section class="case-study-hero" aria-label="Project hero image">
+            <img src="assets/SaskiaDay_Project1_001 .png" alt="Collation of screenshots showing the 404: Page Not Found project interface with dark console-style design and interactive elements" class="case-study-image">
+        </section>
+        <a href="index.html#projects" class="back-button" aria-label="Go back to projects section">← Back to Projects</a>
         
         <!-- Case Study Content -->
-        <div class="case-study">
+        <article class="case-study" role="main" aria-label="Project case study">
             <section class="case-study-section">
                 <h3>Project Overview</h3>
                 <p>This project was created for the University of Canberras 24-hour Design Challenge with the theme "Lost and Found". The challenge was to create a digital design that explored the concept of being lost and found.</p>
@@ -73,8 +74,8 @@
                 <a href="https://www.youtube.com/watch?v=rgs2gT6WJw0" class="project-link-button">Watch Demo</a>
                 <a href="https://github.com/sassykeyah/404NotFound" class="project-link-button">View Code on GitHub</a>
             </section>
-        </div>
-    </div>
+        </article>
+    </main>
 
 <footer class="footer">
     <div class="footer-content">
