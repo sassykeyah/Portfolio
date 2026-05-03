@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Saskia Day Portfolio</title>
+    <title>Project Library - Saskia Day Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/sep3hls.css">
@@ -19,45 +19,27 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="header">
-        <div class="name">Saskia Day</div>
+        <div class="name">Project Library</div>
         <nav class="nav" aria-label="Main navigation">
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="project-library.html">Project Library</a>
+            <a href="index.html">Home</a>
+            <a href="project-library.html" aria-current="page">Project Library</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main id="main-content">
-        <section class="hero">
-            <h1 class="animate-me" id="main-title">
-      UX/UI <br>
-     Designer
-    </h1>
+        <section class="library-intro" aria-label="Project library introduction">
+            <p>A collection of my work across digital experiences and graphic design. Filter by type to focus on what you're after.</p>
         </section>
-        <div class="background">
-            <section class="intro">
-                <p class="animate-me opacity-reveal" id="main-paragraph">
 
-    I believe good design starts by listening, that design is a conversation. With a BDes in Interaction Design and strong interest in designing for accessibility, I create digital experiences that are clear, usable and are inclusive for all.
-
-                </p>
-            </section>
+        <div class="library-filter" role="group" aria-label="Filter projects by type">
+            <button type="button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-filter="web" aria-pressed="false">Web / UX</button>
+            <button type="button" data-filter="graphic" aria-pressed="false">Graphic Design</button>
         </div>
 
-        <section class="carousel" id="featured-carousel" aria-label="Featured projects" aria-roledescription="carousel" tabindex="0">
-            <h2 class="carousel-heading">Featured Projects</h2>
-            <div class="carousel-viewport">
-                <ul class="carousel-track" role="list">
-                    <!-- Slides rendered by script.js from projects.js -->
-                </ul>
-            </div>
-            <div class="carousel-controls">
-                <button type="button" class="carousel-prev" aria-label="Previous project">&#8249;</button>
-                <button type="button" class="carousel-next" aria-label="Next project">&#8250;</button>
-            </div>
-            <ul class="carousel-indicators" aria-label="Select featured project">
-                <!-- Dots rendered by script.js -->
-            </ul>
+        <section class="library-grid" id="project-library-grid" aria-label="Project grid" aria-live="polite">
+            <!-- Cards rendered by script.js from projects.js -->
         </section>
     </main>
 
