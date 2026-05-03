@@ -25,7 +25,7 @@ const PROJECTS = [
     id: "tactile-maps",
     type: "graphic",
     title: "House of Representatives & Senate — Tactile Maps",
-    summary: "Tactile chamber maps commissioned by the Parliamentary Education Office for vision-impaired visitors.",
+    summary: "Tactile chamber maps commissioned by the Parliamentary Education Office for visitors who are vision impaired.",
     thumbnail: "assets/tactile-maps.webp",
     thumbnailAlt: "Tactile maps of the House of Representatives and Senate chambers with raised textures and braille labels",
     year: "2024",
