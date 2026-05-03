@@ -602,8 +602,20 @@ button:focus,
 }
 
 @media (min-width: 768px) {
-    .case-study-gallery--two { grid-template-columns: 1fr 1fr; }
+    .case-study-gallery--two {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
     .case-study-gallery--three { grid-template-columns: repeat(3, 1fr); }
+
+    /* Lock both tiles to the same shape and crop to fill — anchored left,
+       so the homepage screenshot loses its right edge rather than its
+       intro panel. */
+    .case-study-gallery--two img {
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        object-position: left center;
+    }
 }
 
 /* Pull quote — full-width centered moment that punctuates the narrative. */
