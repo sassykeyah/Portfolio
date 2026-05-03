@@ -56,7 +56,6 @@ button:focus,
 
 /* Ensure focus is visible on interactive elements */
 .nav a:focus,
-.project-link:focus,
 .back-button:focus,
 .project-link-button:focus {
     outline: 3px solid var(--secondary-color);
@@ -65,10 +64,6 @@ button:focus,
 
 .opacity-reveal {
     color: var(--light-color);
-}
-
-.white-text {
-    color: white !important;
 }
 
 .background {
@@ -142,123 +137,6 @@ button:focus,
     border-radius: var(--border-radius-large);
     padding: 2em;
 }
-/* ===== PROJECTS SECTION ===== */
-.projects {
-    width: 100vw;
-    margin-top: 8em;
-    margin-bottom: 7em;
-}
-
-.project-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.project-layout {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 2em;
-    padding-bottom: 3%;
-    box-sizing: border-box;
-}
-
-.project-image {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    min-height: 400px;
-    max-height: 600px;
-    object-fit: cover;
-    object-position: center 60%;
-    border-radius: var(--border-radius-medium);
-    box-shadow: var(--box-shadow-medium);
-    transition: transform var(--transition-standard), box-shadow var(--transition-standard);
-}
-
-.project-image:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--box-shadow-heavy);
-}
-
-.project-info {
-    width: 100%;
-    max-width: 900px;
-    margin-top: 2em;
-    padding: 0 1em;
-}
-
-.project-info h2 {
-    text-decoration: underline;
-    font-size: 2em;
-    font-weight: bold;
-    margin: 0 0 0.5em 0;
-}
-
-.project-info h3 {
-    font-size: 1.3em;
-    font-weight: normal;
-    margin: 0 0 1em 0;
-}
-
-/* Project Tags */
-.project-tags {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1em;
-    margin-top: 1em;
-}
-
-.project-tags h4 {
-    margin: 0 0 0.5em 0;
-    font-size: 1.2em;
-    color: var(--primary-color);
-}
-
-.project-tag1,
-.project-tag2 {
-    padding: 0.5em 2em;
-    border: 2px solid #111;
-    border-radius: var(--border-radius-small);
-    font-size: 1.1em;
-    color: var(--primary-color);
-    box-shadow: var(--box-shadow-light);
-}
-
-.project-tag2 {
-    font-weight: bold;
-}
-
-/* Tech Buttons */
-.tech-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-}
-
-.tech-button {
-    padding: 0.4em 1em;
-    border: 2px solid #111;
-    border-radius: 20px;
-    background: transparent;
-    color: var(--primary-color);
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: all var(--transition-standard);
-    box-shadow: var(--box-shadow-light);
-}
-
-.tech-button:hover {
-    background: var(--primary-color);
-    color: var(--light-color);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
 /* ===== PROJECT DETAIL PAGES ===== */
 .project-detail {
     width: 100%;
@@ -324,6 +202,17 @@ button:focus,
 }
 
 /* Case Study */
+.case-study-title {
+    max-width: 1800px;
+    width: 90%;
+    margin: 1em auto 0.5em;
+    padding: 0 4em;
+    font-size: clamp(2em, 5vw, 4em);
+    font-weight: bold;
+    line-height: 1.1;
+    color: var(--secondary-color);
+}
+
 .case-study {
     max-width: 1800px;
     width: 90%;
@@ -335,7 +224,7 @@ button:focus,
     margin-bottom: 3em;
 }
 
-.case-study-section h3 {
+.case-study-section h2 {
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 0.5em;
@@ -536,31 +425,6 @@ button:focus,
         margin: 3em auto;
     }
     
-    /* Projects */
-    .project-layout {
-        height: auto;
-        padding-top: 1.5em;
-    }
-    
-    .project-image {
-        max-width: 800px;
-        min-height: 350px;
-        max-height: 500px;
-    }
-    
-    .project-info {
-        max-width: 800px;
-        margin-top: 1.5em;
-    }
-    
-    .project-info h2 {
-        font-size: 1.8em;
-    }
-    
-    .project-info h3 {
-        font-size: 1.2em;
-    }
-    
     /* Case Studies */
     .case-study-image {
         max-width: 1000px;
@@ -573,7 +437,7 @@ button:focus,
         padding: 2.5em 3em;
     }
     
-    .case-study-section h3 {
+    .case-study-section h2 {
         font-size: 2.5em;
     }
     
@@ -638,53 +502,6 @@ button:focus,
         margin: 2.5em auto;
     }
     
-    /* Projects */
-    .projects {
-        margin-top: 8em;
-    }
-    
-    .project-layout {
-        height: auto;
-        padding: 1rem;
-        margin-bottom: 7rem;
-    }
-    
-    .project-image {
-        max-width: 100%;
-        min-height: 250px;
-        max-height: 400px;
-    }
-    
-    .project-info {
-        max-width: 100%;
-        margin-top: 1rem;
-        padding: 0 0.5rem;
-    }
-    
-    .project-info h2 {
-        font-size: 1.5em;
-    }
-    
-    .project-info h3 {
-        font-size: 1.1em;
-        line-height: 1.5;
-    }
-    
-    .tech-buttons {
-        gap: 0.3em;
-    }
-    
-    .tech-button {
-        font-size: 0.8em;
-        padding: 0.3em 0.8em;
-    }
-    
-    .project-tag1,
-    .project-tag2 {
-        padding: 0.4em 1.5em;
-        font-size: 1em;
-    }
-    
     /* Case study pages */
     .case-study-image {
         max-width: 100%;
@@ -699,7 +516,7 @@ button:focus,
         padding: 2em 2.5em 2em 2em;
     }
     
-    .case-study-section h3 {
+    .case-study-section h2 {
         font-size: 2em;
     }
     
@@ -798,81 +615,6 @@ button:focus,
         margin-top: 1em;
     }
     
-    /* Project layouts for very small screens */
-    .projects {
-        margin-top: 3em;
-    }
-    
-    .project-layout {
-        padding: 0.5rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .project-image {
-        min-height: 180px;
-        max-height: 280px;
-        border-radius: 8px;
-    }
-    
-    .project-info {
-        padding: 0 0.2rem;
-        margin-top: 0.8rem;
-    }
-    
-    .project-info h2 {
-        font-size: clamp(1em, 4.5vw, 1.2em);
-        line-height: 1.1;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        margin-bottom: 0.3em;
-    }
-    
-    .project-info h3 {
-        font-size: clamp(0.8em, 3.5vw, 0.95em);
-        line-height: 1.2;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        margin-bottom: 0.8em;
-    }
-    
-    .tech-buttons {
-        gap: 0.15em;
-        margin-top: 0.5em;
-    }
-    
-    .tech-button {
-        font-size: clamp(0.6em, 2.8vw, 0.7em);
-        padding: 0.2em 0.5em;
-        border-radius: 15px;
-        border-width: 1px;
-        word-break: break-word;
-        overflow-wrap: break-word;
-    }
-    
-    .project-tag1,
-    .project-tag2 {
-        padding: 0.25em 1em;
-        font-size: clamp(0.8em, 3vw, 0.9em);
-        border-radius: 3px;
-        border-width: 1px;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        margin-bottom: 0.3em;
-    }
-    
-    .project-tags {
-        gap: 0.5em;
-        margin-top: 0.5em;
-    }
-    
-    .project-tags h4 {
-        font-size: clamp(1em, 4vw, 1.1em);
-        margin-bottom: 0.3em;
-        word-break: break-word;
-    }
-    
     /* Case study pages */
     .project-detail {
         padding: 0.5rem 0.5rem;
@@ -907,7 +649,7 @@ button:focus,
         text-align: left;
     }
     
-    .case-study-section h3 {
+    .case-study-section h2 {
         font-size: clamp(1.1em, 4.5vw, 1.4em);
         word-break: break-word;
         overflow-wrap: break-word;
