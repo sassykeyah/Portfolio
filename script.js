@@ -1,127 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Only run animations on home page (check for main-title element)
-  const isHomePage = document.querySelector('#main-title');
-
-  gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
-
-  // Render data-driven UI early so it runs before any code below that might throw.
+  // Render data-driven UI first so it runs before anything else that might throw.
   try { setupCarousel(); } catch (err) { console.error('[carousel] setup failed:', err); }
   try { setupLibrary();  } catch (err) { console.error('[library] setup failed:', err); }
-  
-  // RESPONSIVE DESIGN SYSTEM FOR GSAP ANIMATIONS
-  const BREAKPOINTS = {
-    smallMobile: 475,
-    mobile: 768,
-    laptop: 1024
-  };
-  
-  // Get current screen size category
-  function getScreenSize() {
-    const width = window.innerWidth;
-    if (width <= BREAKPOINTS.smallMobile) return 'smallMobile';
-    if (width <= BREAKPOINTS.mobile) return 'mobile';
-    if (width <= BREAKPOINTS.laptop) return 'laptop';
-    return 'desktop';
-  }
-  
-  // Responsive animation values based on screen size
-  function getResponsiveValues() {
-    const screenSize = getScreenSize();
-    
-    switch(screenSize) {
-      case 'smallMobile':
-        return {
-          heroFadeDistance: -30,
-          introScrollEnd: '+=400',
-          splitTextStagger: 0.015,
-          autoScrollDuration: 0.6,
-          headerHideThreshold: 30
-        };
-      case 'mobile':
-        return {
-          heroFadeDistance: -50,
-          introScrollEnd: '+=500',
-          splitTextStagger: 0.02,
-          autoScrollDuration: 0.8,
-          headerHideThreshold: 50
-        };
-      case 'laptop':
-        return {
-          heroFadeDistance: -75,
-          introScrollEnd: '+=350',
-          splitTextStagger: 0.04,
-          autoScrollDuration: 0.9,
-          headerHideThreshold: 75
-        };
-      default: // desktop
-        return {
-          heroFadeDistance: -100,
-          introScrollEnd: '+=400',
-          splitTextStagger: 0.05,
-          autoScrollDuration: 1,
-          headerHideThreshold: 100
-        };
-    }
-  }
-  
-  // Ensure header has consistent styling on all screen sizes
-  function ensureHeaderStyling() {
-    const header = document.querySelector('.header');
-    const name = document.querySelector('.name');
-    const navLinks = document.querySelectorAll('.nav a');
-    
-    if (header) {
-      header.style.background = 'var(--light-color)';
 
-      if (name) {
-        name.classList.remove('white-text');
-        name.style.color = 'var(--secondary-color)';
-      }
-
-      navLinks.forEach(link => {
-        link.classList.remove('white-text');
-        link.style.color = 'var(--primary-color)';
-      });
+  // Header styling: cream background with green name + dark nav on every page.
+  const header = document.querySelector('.header');
+  const name = document.querySelector('.name');
+  const navLinks = document.querySelectorAll('.nav a');
+  if (header) {
+    header.style.background = 'var(--light-color)';
+    if (name) {
+      name.classList.remove('white-text');
+      name.style.color = 'var(--secondary-color)';
     }
-  }
-  
-  // Responsive refresh function
-  function refreshResponsiveAnimations() {
-    ScrollTrigger.refresh();
-    ensureHeaderStyling(); // Always maintain consistent header styling
-  }
-  
-  // Initialize header styling immediately
-  ensureHeaderStyling();
-  
-  // Listen for resize events and refresh animations
-  let resizeTimeout;
-  window.addEventListener('resize', function() {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(refreshResponsiveAnimations, 250);
-  });
-
-  // Intro paragraph: fade in chars as it enters the viewport (no pinning).
-  if (isHomePage) {
-    const intro = document.querySelector('.opacity-reveal');
-    const screenSize = getScreenSize();
-    if (intro && screenSize !== 'smallMobile' && screenSize !== 'mobile') {
-      const values = getResponsiveValues();
-      const splitLetters = SplitText.create(intro);
-      gsap.set(splitLetters.chars, { opacity: 0.2, y: 0 });
-      gsap.to(splitLetters.chars, {
-        scrollTrigger: {
-          trigger: intro,
-          start: 'top 80%',
-          end: 'bottom 60%',
-          scrub: true
-        },
-        opacity: 1,
-        duration: 1,
-        stagger: values.splitTextStagger,
-        ease: 'none'
-      });
-    }
+    navLinks.forEach(link => {
+      link.classList.remove('white-text');
+      link.style.color = 'var(--primary-color)';
+    });
   }
 
   // ===== PROJECT CARD FACTORY (shared by carousel + library) =====
