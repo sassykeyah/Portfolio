@@ -70,17 +70,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const name = document.querySelector('.name');
     const navLinks = document.querySelectorAll('.nav a');
     
-    if (header && !document.body.classList.contains('contact-page')) {
-      // Always ensure header has background and dark text on all screen sizes
+    if (header) {
       header.style.background = 'var(--light-color)';
-      
-      
-      // Ensure text is always dark (remove any white-text classes)
+
       if (name) {
         name.classList.remove('white-text');
         name.style.color = 'var(--secondary-color)';
       }
-      
+
       navLinks.forEach(link => {
         link.classList.remove('white-text');
         link.style.color = 'var(--primary-color)';
@@ -126,74 +123,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
   }
-
-  // Mobile header hide/show behavior 
-  const screenSize = getScreenSize();
-  if (screenSize === 'smallMobile' || screenSize === 'mobile') {
-    const header = document.querySelector('.header');
-    
-    let lastScrollTop = 0;
-    let ticking = false;
-    
-    function updateMobileHeader() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      
-      if (scrollTop > lastScrollTop && scrollTop > 100) {
-        // Scrolling down - hide header
-        header.style.transform = 'translateY(-100%)';
-      } else {
-        // Scrolling up - show header
-        header.style.transform = 'translateY(0)';
-      }
-      
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      ticking = false;
-    }
-    
-    function requestMobileTick() {
-      if (!ticking) {
-        requestAnimationFrame(updateMobileHeader);
-        ticking = true;
-      }
-    }
-    
-    window.addEventListener('scroll', requestMobileTick);
-  }
-
-  // Header hide/show on scroll for project pages
-  const isProjectPage = document.querySelector('.project-detail');
-  if (isProjectPage) {
-    const values = getResponsiveValues();
-    let lastScrollTop = 0;
-    let ticking = false;
-    
-    function updateHeader() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const header = document.querySelector('.header');
-      
-      if (scrollTop > lastScrollTop && scrollTop > values.headerHideThreshold) {
-        // Scrolling down - hide header
-        header.style.transform = 'translateY(-100%)';
-      } else {
-        // Scrolling up - show header
-        header.style.transform = 'translateY(0)';
-      }
-      
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      ticking = false;
-    }
-    
-    function requestTick() {
-      if (!ticking) {
-        requestAnimationFrame(updateHeader);
-        ticking = true;
-      }
-    }
-    
-    window.addEventListener('scroll', requestTick);
-  }
-  
- 
 
   // ===== PROJECT CARD FACTORY (shared by carousel + library) =====
   function buildProjectCard(project) {
