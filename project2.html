@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Project 2 - Saskia Day Portfolio</title>
+    <title>Spotify Rewind - Saskia Day Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/sep3hls.css">
@@ -24,60 +24,130 @@
     </header>
 
     <main id="main-content" class="project-detail">
-        
-        
+
         <h1 class="case-study-title">Spotify Rewind</h1>
+
+        <!-- Metadata strip -->
+        <dl class="case-study-meta" aria-label="Project details">
+            <div class="case-study-meta__item">
+                <dt>Role</dt>
+                <dd>Designer &amp; Developer</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Year</dt>
+                <dd>2024</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Duration</dt>
+                <dd>One semester</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Tools</dt>
+                <dd>Vue.js, Spotify API, cURL, Figma</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Status</dt>
+                <dd>Live demo</dd>
+            </div>
+        </dl>
+
+        <!-- At-a-glance overview -->
+        <p class="case-study-overview">
+            An interactive timeline that places pivotal moments in Australia's history beside the highest-charting ARIA song of the same year — two separate snapshots of a year, shown side by side, for users to read against each other however they like.
+        </p>
 
         <!-- Hero Section -->
         <section class="case-study-hero" aria-label="Project hero image">
             <img src="assets/spotify-rewind.webp" alt="Spotify Rewind homepage showing an interactive timeline of Australian historical events with retro 80s-style design and animated background shapes" class="case-study-image">
         </section>
-        <a href="project-library.html" class="back-button" aria-label="Go back to project library">← Back to Project Library</a>
 
-        <!-- Case Study Content -->
-        <article class="case-study" aria-label="Project case study">
+        <!-- ===== Chapter 01: The Challenge (banded for emphasis) ===== -->
+        <div class="case-study-band">
+            <header class="case-study-chapter">
+                <span class="case-study-chapter__number">Chapter 01</span>
+                <h2 class="case-study-chapter__title">The challenge</h2>
+            </header>
             <section class="case-study-section">
-                <h2>Project Overview</h2>
-                <p>Spotify Rewind is an interactive web application targeted at music enthusiasts and the general population who are interested in the connections between music and Australia's history. It aims to provide an engaging way to explore significant historical events the highest charting ARIA songs from the corrosponding years.</p>
-            </section>
-
-            <section class="case-study-section">
-                <h2>The Challenge</h2>
-                <p>A highly technical project, it required addressing these challenges:</p>
+                <p>Australia's history and Australia's music charts usually live in completely different places — a textbook on one shelf, a streaming app on another. The brief was simply to put them in the same view, year by year, and let users decide for themselves what to make of seeing the two side by side.</p>
+                <p>Building it surfaced a stack of constraints that pulled against each other:</p>
                 <ul>
-                    <li>Successful integration of Spotify's API using Vue.js and cURL</li>
-                    <li>Understand the target user and what they would like to gain from the experience.</li>
-                    <li>Depict over 15 key events in Australia’s history with corresponding ARIA top song of the year.</li>
-                    <li>Ensure web application is responsive to all device sizes.</li>
+                    <li>Authenticating Spotify's API and threading live track data through a Vue.js front end.</li>
+                    <li>Pinning down a target user — music enthusiasts and casual learners — and what they'd actually want to do with this experience.</li>
+                    <li>Showing more than fifteen key events in Australia's history alongside the ARIA chart-topper of the same year, without one ever overshadowing the other.</li>
+                    <li>Holding the experience together responsively from phone to desktop.</li>
                 </ul>
             </section>
+        </div>
 
-            <section class="case-study-section">
-                <h2>My Solution</h2>
-                <p>My solution focused on creating an interactive, horizontal timeline that allows the user to scroll and click on each event:</p>
+        <!-- ===== Chapter 02: My Approach ===== -->
+        <header class="case-study-chapter">
+            <span class="case-study-chapter__number">Chapter 02</span>
+            <h2 class="case-study-chapter__title">My approach</h2>
+        </header>
+
+        <section class="case-study-section">
+            <p>Three pillars carried the work — a clear concept, a design language that matched the subject matter, and a technical build that earned its complexity.</p>
+        </section>
+
+        <div class="case-study-columns">
+            <div class="case-study-columns__col">
+                <h3>Concept</h3>
                 <ul>
-                    <li><strong>Concept Ideation:</strong> Explored the NMAS timeline of important events in Australia's history and correlated them with the top ARIA songs from those years.</li>
-                    <li><strong>Design Choices:</strong> Retro design choices to envoke a sense of nostalgia, use of an animating backrground (referencing all those cool 80's shapes we all love!)</li>
-                    <li><strong>Technical Implementation:</strong> Integration of cURL to authenticate and fetch data from Spotify's API, and Vue.js to build a dynamic and responsive user interface.</li>
+                    <li>Cross-referenced the NMA's timeline of significant Australian events with the ARIA top song of each year.</li>
+                    <li>Held each entry as two independent facts shown side by side — an event and a chart-topper from the same year — without claiming one explains or shapes the other.</li>
+                    <li>Designed for browsing, not searching — the timeline rewards scrolling.</li>
+                </ul>
+            </div>
+            <div class="case-study-columns__col">
+                <h3>Design</h3>
+                <ul>
+                    <li>Retro visual language — neon palette, geometric motifs — to evoke nostalgia without locking the work to one decade.</li>
+                    <li>Animated background shapes referencing the iconic 80s graphic language.</li>
+                    <li>Type and contrast tuned for legibility against the busy backdrop.</li>
+                </ul>
+            </div>
+            <div class="case-study-columns__col">
+                <h3>Build</h3>
+                <ul>
+                    <li>Vue.js front end driving a dynamic, component-based timeline.</li>
+                    <li>cURL handling Spotify API authentication and track data.</li>
+                    <li>A details view on each event for users who want to dig deeper.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== Chapter 03: What I built (banded for emphasis) ===== -->
+        <div class="case-study-band">
+            <header class="case-study-chapter">
+                <span class="case-study-chapter__number">Chapter 03</span>
+                <h2 class="case-study-chapter__title">What I built</h2>
+            </header>
+            <section class="case-study-section">
+                <ul>
+                    <li><strong>Horizontal scrolling timeline</strong> — chronological browsing of Australian events with the chart-topping song from the same year shown beside each one.</li>
+                    <li><strong>Event + song juxtaposition</strong> — every entry surfaces the historical event next to its ARIA-charting song of the same year, with a details view for further reading. No claim is made that one shaped the other.</li>
+                    <li><strong>Direct-to-Spotify playback</strong> — a one-click jump to the Spotify web player so users can actually listen, not just read.</li>
                 </ul>
             </section>
+        </div>
 
-            <section class="case-study-section">
-                <h2>Key Features</h2>
-                <ul>
-                    <li>Horizontal timeline, it allows users to scroll through Australia's history in a chronological manner and the relevant music.</li>
-                    <li>Showcases key historical events alongside their corresponding top ARIA songs, providing context and enhancing user engagement. Implemented a 'details' page for further exploration.</li>
-                    <li>Abilities to click a button to navigate directly to the spotify webplayer to listen to the selected songs.</li>
-                </ul>
-            </section>
+        <section class="case-study-final-cta" aria-label="Try the project">
+            <h2 class="case-study-final-cta__heading">See it for yourself</h2>
+            <p class="case-study-final-cta__intro">The timeline is best experienced by scrolling through it. Try the live site, or dig into the code.</p>
+            <div class="case-study-final-cta__actions">
+                <a href="https://sassykeyah.github.io/SpotifyRewind/" class="case-study-final-cta__button case-study-final-cta__button--primary" target="_blank" rel="noopener noreferrer" aria-label="Open the live Spotify Rewind site (opens in new tab)">
+                    Try the live site &rarr;
+                </a>
+                <a href="https://github.com/sassykeyah/SpotifyRewind" class="case-study-final-cta__button case-study-final-cta__button--secondary" target="_blank" rel="noopener noreferrer" aria-label="View the Spotify Rewind source code on GitHub (opens in new tab)">
+                    View code on GitHub
+                </a>
+            </div>
+        </section>
 
-
-            <section class="case-study-section">
-                <h2>View Project</h2>
-                <a href="https://sassykeyah.github.io/SpotifyRewind/" class="project-link-button" target="_blank" rel="noopener noreferrer" aria-label="Visit the Spotify Rewind live site (opens in new tab)">Visit Live Site</a>
-                <a href="https://github.com/sassykeyah/SpotifyRewind" class="project-link-button" target="_blank" rel="noopener noreferrer" aria-label="View the Spotify Rewind source code on GitHub (opens in new tab)">View Code on GitHub</a>
-            </section>
-        </article>
+        <a href="project-library.html" class="case-study-next case-study-next--back" aria-label="Back to project library">
+            <span class="case-study-next__label">Back to</span>
+            <span class="case-study-next__title">Project library</span>
+        </a>
     </main>
 
 <footer class="footer">
@@ -94,7 +164,7 @@
             </div>
         </div>
         <div class="footer-info">
-            <p>&copy; 2025 Saskia Day. All rights reserved.</p>
+            <p>&copy; 2026 Saskia Day. All rights reserved.</p>
         </div>
     </div>
 </footer>

@@ -24,7 +24,10 @@ body {
     margin: 0;
     background: var(--light-color);
     color: var(--primary-color);
+    letter-spacing: 0.02em;
     word-spacing: 0.08em;
+    -webkit-hyphens: none;
+    hyphens: none;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -213,7 +216,7 @@ button:focus,
     max-width: 1800px;
     width: 90%;
     margin: 1em auto 0.5em;
-    padding: 0 4em;
+    padding: 0 clamp(1rem, 4vw, 4em);
     font-size: clamp(2em, 5vw, 4em);
     font-weight: bold;
     line-height: 1.1;
@@ -224,18 +227,27 @@ button:focus,
     max-width: 1800px;
     width: 90%;
     margin: 1em auto 4em auto;
-    padding: 3em 4em;
 }
 
 .case-study-section {
-    margin-bottom: 3em;
+    max-width: 1800px;
+    width: 90%;
+    margin: 0 auto 3em;
+    padding: 0 clamp(1rem, 4vw, 4em);
 }
 
 .case-study-section h2 {
-    font-size: 3em;
+    font-size: clamp(1.6em, 3vw, 2.5em);
     font-weight: bold;
     margin-bottom: 0.5em;
     color: var(--secondary-color);
+}
+
+/* When .case-study-section is inside a .case-study article (project2/3), don't double-constrain. */
+.case-study .case-study-section {
+    max-width: none;
+    width: auto;
+    padding: 0 clamp(1rem, 4vw, 4em);
 }
 
 .case-study-section p {
@@ -253,6 +265,629 @@ button:focus,
     font-size: 1.5em;
     line-height: 1.6;
     margin-bottom: 0.5em;
+}
+
+/* ===== CASE STUDY BLOCK LIBRARY ===== */
+/* Reusable section components — each project page composes whichever blocks fit
+   its story. Mobile-first base; min-width queries scale up. */
+
+/* Metadata strip — inline label/value pairs, lightweight. */
+.case-study-meta {
+    max-width: 1800px;
+    width: 90%;
+    margin: 0 auto 2.5em;
+    padding: 0 clamp(1rem, 4vw, 4em);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.25rem 2rem;
+}
+
+.case-study-meta__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.case-study-meta dt {
+    font-size: 0.78em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    font-weight: bold;
+}
+
+.case-study-meta dd {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Metadata cards — heavier alternative for richer case studies (Role / Tools / Details). */
+.case-study-meta-cards {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto 3em;
+    padding: 0 clamp(1rem, 4vw, 2em);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.case-study-meta-cards__card {
+    background: #ffffff;
+    border-radius: var(--border-radius-medium);
+    padding: 1.5em 1.75em;
+    box-shadow: var(--box-shadow-light);
+    border: 1px solid rgba(26, 26, 25, 0.06);
+}
+
+.case-study-meta-cards__label {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: bold;
+    color: var(--primary-color);
+    opacity: 0.6;
+    margin: 0 0 0.8em;
+}
+
+.case-study-meta-cards__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.case-study-meta-cards__list li {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+    .case-study-meta-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Chapter divider — large numbered scroll milestone for major narrative sections. */
+.case-study-chapter {
+    max-width: 1800px;
+    width: 90%;
+    margin: 5em auto 2em;
+    padding: 0 clamp(1rem, 4vw, 4em);
+    text-align: left;
+    position: relative;
+}
+
+.case-study-chapter::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin-bottom: 1.5em;
+    opacity: 0.9;
+}
+
+.case-study-chapter__number {
+    display: block;
+    font-size: clamp(0.9em, 1.4vw, 1.1em);
+    font-weight: bold;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.65;
+    margin-bottom: 0.5em;
+}
+
+.case-study-chapter__title {
+    font-size: clamp(2.4em, 6vw, 5em);
+    font-weight: bold;
+    line-height: 1;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+/* Tinted band — wraps a section in a subtle tint for visual rhythm and emphasis. */
+.case-study-band {
+    align-self: stretch;
+    width: 100%;
+    background: rgba(47, 79, 31, 0.05);
+    padding: 4em 0;
+    margin: 4em 0;
+    box-sizing: border-box;
+}
+
+.case-study-band--green {
+    background: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.case-study-band--green .case-study-chapter__number,
+.case-study-band--green .case-study-chapter__title,
+.case-study-band--green .case-study-section h2 {
+    color: var(--light-color);
+}
+
+.case-study-band--green .case-study-chapter::before {
+    background: var(--light-color);
+}
+
+.case-study-band--green .case-study-section p,
+.case-study-band--green .case-study-section li {
+    color: var(--light-color);
+}
+
+.case-study-band > .case-study-chapter:first-child {
+    margin-top: 0;
+}
+
+.case-study-band > *:last-child {
+    margin-bottom: 0;
+}
+
+/* Two-column paired sections — for related concepts side by side (mobile-first stack). */
+.case-study-pair {
+    max-width: 1800px;
+    width: 90%;
+    margin: 3em auto;
+    padding: 0 clamp(1rem, 4vw, 4em);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3em;
+}
+
+.case-study-pair__col h3 {
+    font-size: clamp(1.4em, 2.4vw, 1.9em);
+    font-weight: bold;
+    margin: 0 0 0.6em;
+    color: var(--secondary-color);
+}
+
+.case-study-pair__col p {
+    font-size: 1.15em;
+    line-height: 1.6;
+    margin: 0 0 1em;
+}
+
+.case-study-pair__col ul {
+    margin: 1em 0 0;
+    padding-left: 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.case-study-pair__col li {
+    font-size: 1.05em;
+    line-height: 1.55;
+}
+
+@media (min-width: 768px) {
+    .case-study-pair {
+        grid-template-columns: 1fr 1fr;
+        gap: 4em;
+    }
+}
+
+/* Stats block — three large percentages or numbers with captions. */
+.case-study-stats {
+    max-width: 1800px;
+    width: 90%;
+    margin: 3em auto;
+    padding: 0 clamp(1rem, 4vw, 4em);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5em;
+    text-align: center;
+}
+
+.case-study-stats__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.case-study-stats__number {
+    font-size: clamp(3em, 7vw, 5.5em);
+    font-weight: bold;
+    line-height: 1;
+    color: var(--primary-color);
+}
+
+.case-study-stats__caption {
+    font-size: clamp(1em, 1.4vw, 1.15em);
+    line-height: 1.4;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.case-study-stats__source {
+    font-size: 0.85em;
+    opacity: 0.55;
+    margin-top: 0.6em;
+    font-style: italic;
+}
+
+@media (min-width: 768px) {
+    .case-study-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Multi-column feature comparison — parallel categories, each with bullet list. */
+.case-study-columns {
+    max-width: 1800px;
+    width: 90%;
+    margin: 3em auto;
+    padding: 0 clamp(1rem, 4vw, 4em);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5em;
+}
+
+.case-study-columns__col h3 {
+    font-size: clamp(1.2em, 1.8vw, 1.5em);
+    font-weight: bold;
+    margin: 0 0 0.8em;
+    color: var(--secondary-color);
+}
+
+.case-study-columns__col ul {
+    list-style: disc;
+    padding-left: 1.2em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.case-study-columns__col li {
+    font-size: 1.05em;
+    line-height: 1.55;
+}
+
+@media (min-width: 768px) {
+    .case-study-columns {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* "At a glance" overview — large, conceptual hook in secondary color. */
+.case-study-overview {
+    max-width: 1800px;
+    width: 90%;
+    margin: 0 auto 2.5em;
+    padding: 0 clamp(1rem, 4vw, 4em);
+    font-size: clamp(1.3em, 2.4vw, 1.9em);
+    line-height: 1.4;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Image gallery — 1 column mobile, 2 or 3 with modifier classes on wider screens. */
+.case-study-gallery {
+    max-width: 1800px;
+    width: 90%;
+    margin: 2em auto 3em;
+    padding: 0 clamp(1rem, 4vw, 4em);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+.case-study-gallery figure {
+    margin: 0;
+}
+
+.case-study-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow-medium);
+}
+
+.case-study-gallery figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.95em;
+    opacity: 0.7;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .case-study-gallery--two { grid-template-columns: 1fr 1fr; }
+    .case-study-gallery--three { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Pull quote — full-width centered moment that punctuates the narrative. */
+.case-study-quote {
+    max-width: 1200px;
+    width: 90%;
+    margin: 5em auto;
+    padding: 2em clamp(1.5rem, 5vw, 4em);
+    text-align: center;
+    font-size: clamp(1.8em, 4vw, 3.2em);
+    line-height: 1.2;
+    font-weight: bold;
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.case-study-quote::before {
+    content: '\201C';
+    display: block;
+    font-size: 1.5em;
+    line-height: 0.8;
+    color: var(--secondary-color);
+    opacity: 0.35;
+    margin-bottom: 0.1em;
+}
+
+.case-study-quote cite {
+    display: block;
+    margin-top: 1em;
+    font-size: 0.35em;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.6;
+    color: var(--primary-color);
+}
+
+/* Statement — typographic emphasis moment (transformation, principle, or featured fact).
+   Use when the project's heart isn't a quoted person but a concept worth showing. */
+.case-study-statement {
+    max-width: 1200px;
+    width: 90%;
+    margin: 5em auto;
+    padding: 2em clamp(1rem, 4vw, 3em);
+    text-align: center;
+}
+
+.case-study-statement__line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.4em, 2vw, 1em);
+    flex-wrap: wrap;
+    font-size: clamp(2.8em, 9vw, 7em);
+    font-weight: bold;
+    line-height: 1;
+    color: var(--secondary-color);
+}
+
+.case-study-statement__arrow {
+    opacity: 0.45;
+    font-weight: normal;
+}
+
+.case-study-statement__caption {
+    margin: 1.2em 0 0;
+    font-size: clamp(0.95em, 1.4vw, 1.2em);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    opacity: 0.55;
+    color: var(--primary-color);
+}
+
+/* Callout box — accessibility note, key decision, or context aside. */
+.case-study-callout {
+    max-width: 1200px;
+    width: 85%;
+    margin: 2em auto;
+    padding: 1.5em clamp(1.25rem, 3vw, 2em);
+    background: rgba(47, 79, 31, 0.07);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0;
+}
+
+.case-study-callout h3 {
+    margin: 0 0 0.5em;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--secondary-color);
+}
+
+.case-study-callout p {
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Embedded video / iframe — for live demos, motion demos, prototype embeds. */
+.case-study-embed {
+    max-width: 1800px;
+    width: 90%;
+    margin: 3em auto;
+    padding: 0 clamp(1rem, 4vw, 4em);
+}
+
+.case-study-embed__frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: var(--border-radius-medium);
+    overflow: hidden;
+    box-shadow: var(--box-shadow-medium);
+    background: #000;
+}
+
+.case-study-embed__frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.case-study-embed__caption {
+    margin: 0.9em 0 0;
+    text-align: center;
+    font-size: 0.95em;
+    opacity: 0.6;
+    font-style: italic;
+}
+
+/* Final CTA — prominent end-of-case-study section that pulls visitors to the actual work.
+   Mobile-first: full-bleed band on phones (matches .case-study-band rhythm),
+   contained rounded box from tablet up. */
+.case-study-final-cta {
+    align-self: stretch;
+    width: 100%;
+    margin: 4em 0 2em;
+    padding: 4em clamp(1.5em, 4vw, 2.5em);
+    text-align: center;
+    background: var(--secondary-color);
+    color: var(--light-color);
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .case-study-final-cta {
+        align-self: auto;
+        max-width: 1400px;
+        width: 90%;
+        margin: 5em auto 4em;
+        padding: clamp(2.5em, 5vw, 4em) clamp(1.5em, 4vw, 4em);
+        border-radius: var(--border-radius-medium);
+        box-shadow: var(--box-shadow-heavy);
+    }
+}
+
+.case-study-final-cta__heading {
+    font-size: clamp(2em, 5vw, 4em);
+    font-weight: bold;
+    line-height: 1.05;
+    margin: 0 0 0.4em;
+    color: var(--light-color);
+}
+
+.case-study-final-cta__intro {
+    font-size: clamp(1.1em, 2vw, 1.45em);
+    line-height: 1.5;
+    margin: 0 auto 2em;
+    max-width: 32em;
+    opacity: 0.9;
+}
+
+.case-study-final-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.case-study-final-cta__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    padding: 1em 2.4em;
+    font-size: clamp(1.05em, 1.7vw, 1.3em);
+    font-weight: bold;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 2px solid var(--light-color);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, background var(--transition-standard), color var(--transition-standard);
+    will-change: transform;
+}
+
+.case-study-final-cta__button--primary {
+    background: var(--light-color);
+    color: var(--secondary-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
+}
+
+.case-study-final-cta__button--secondary {
+    background: transparent;
+    color: var(--light-color);
+}
+
+.case-study-final-cta__button:hover,
+.case-study-final-cta__button:focus-visible {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.32);
+}
+
+.case-study-final-cta__button--secondary:hover,
+.case-study-final-cta__button--secondary:focus-visible {
+    background: var(--light-color);
+    color: var(--secondary-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .case-study-final-cta__button { transition: none; }
+}
+
+/* "Next project" navigation card at the end of a case study. */
+.case-study-next {
+    display: block;
+    max-width: 1800px;
+    width: 90%;
+    margin: 4em auto;
+    padding: clamp(1.5em, 3vw, 2em) clamp(1.25rem, 4vw, 4em);
+    background: var(--primary-color);
+    color: var(--light-color);
+    text-decoration: none;
+    border-radius: var(--border-radius-medium);
+    transition: transform var(--transition-standard), box-shadow var(--transition-standard);
+    box-shadow: var(--box-shadow-medium);
+}
+
+.case-study-next:hover,
+.case-study-next:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-heavy);
+}
+
+.case-study-next__label {
+    display: block;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    margin-bottom: 0.4em;
+}
+
+.case-study-next__title {
+    display: block;
+    font-size: clamp(1.4em, 3vw, 2em);
+    font-weight: bold;
+}
+
+.case-study-next__title::after {
+    content: '\2009\2192';
+    display: inline-block;
+    transition: transform var(--transition-standard);
+}
+
+.case-study-next:hover .case-study-next__title::after,
+.case-study-next:focus-visible .case-study-next__title::after {
+    transform: translateX(4px);
+}
+
+.case-study-next--back .case-study-next__title::after {
+    content: none;
+}
+
+.case-study-next--back .case-study-next__title::before {
+    content: '\2190\2009';
+    display: inline-block;
+    transition: transform var(--transition-standard);
+}
+
+.case-study-next--back:hover .case-study-next__title::before,
+.case-study-next--back:focus-visible .case-study-next__title::before {
+    transform: translateX(-4px);
 }
 
 /* ===== CONTACT PAGE ===== */
@@ -623,7 +1258,7 @@ button:focus,
         font-size: clamp(4em, 10vw, 4.5em);
         line-height: 0.8;
         word-break: break-word;
-        hyphens: auto;
+        hyphens: none;
         max-width: 100%;
         overflow-wrap: break-word;
     }
@@ -687,7 +1322,7 @@ button:focus,
         font-size: clamp(1.1em, 4.5vw, 1.4em);
         word-break: break-word;
         overflow-wrap: break-word;
-        hyphens: auto;
+        hyphens: none;
         line-height: 1.2;
         margin-bottom: 0.6em;
     }
@@ -698,7 +1333,7 @@ button:focus,
         line-height: 1.4;
         word-break: break-word;
         overflow-wrap: break-word;
-        hyphens: auto;
+        hyphens: none;
         margin-bottom: 0.8em;
         margin-right: 0.3em;
     }
@@ -712,7 +1347,7 @@ button:focus,
         font-size: inherit;
         word-break: break-word;
         overflow-wrap: break-word;
-        hyphens: auto;
+        hyphens: none;
     }
     
     .case-study-section p strong {
@@ -723,7 +1358,7 @@ button:focus,
     .case-study * {
         word-break: break-word;
         overflow-wrap: break-word;
-        hyphens: auto;
+        hyphens: none;
     }
     
     .back-button,

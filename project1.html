@@ -24,57 +24,145 @@
     </header>
 
     <main id="main-content" class="project-detail">
-        
+
         <h1 class="case-study-title">24hr Design Challenge — 404: Page Not Found</h1>
 
-        <!-- Hero Section -->
-        <section class="case-study-hero" aria-label="Project hero image">
-            <img src="assets/404-not-found.webp" alt="Collation of screenshots showing the 404: Page Not Found project interface with dark console-style design and interactive elements" class="case-study-image">
+        <!-- Metadata strip -->
+        <dl class="case-study-meta" aria-label="Project details">
+            <div class="case-study-meta__item">
+                <dt>Role</dt>
+                <dd>Designer &amp; Developer</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Year</dt>
+                <dd>2025</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Duration</dt>
+                <dd>24 hours</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Tools</dt>
+                <dd>GSAP, JavaScript, Figma</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Status</dt>
+                <dd>Live demo</dd>
+            </div>
+        </dl>
+
+        <!-- At-a-glance overview -->
+        <p class="case-study-overview">
+            An interactive narrative built in 24 hours that reframes 404 errors as a metaphor for digital disconnection. Following the journey from lost (404) to found (302).
+        </p>
+
+        <!-- Hero Section — demo video as the hero, showing the actual experience first -->
+        <figure class="case-study-embed" aria-label="Project demo video">
+            <div class="case-study-embed__frame">
+                <iframe
+                    src="https://www.youtube.com/embed/rgs2gT6WJw0?rel=0&modestbranding=1"
+                    title="404: Page Not Found — demo video"
+                    loading="lazy"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </figure>
+
+        <!-- ===== Chapter 01: The Challenge (banded for emphasis) ===== -->
+        <div class="case-study-band">
+            <header class="case-study-chapter">
+                <span class="case-study-chapter__number">Chapter 01</span>
+                <h2 class="case-study-chapter__title">The challenge</h2>
+            </header>
+            <section class="case-study-section">
+                <p>The University of Canberra's 24-hour Design Challenge set the theme "Lost and Found" and asked entrants to ship a digital design — concept, design, code, and deployment — within a single day.</p>
+                <p>Twenty-four hours to take an idea from blank page to deployed site is barely enough time to second-guess yourself, let alone iterate. The constraints I had to design within:</p>
+                <ul>
+                    <li>Devising a narrative that used the theme effectively, requiring fast storyboarding and ideation.</li>
+                    <li>Integrating complex scroll interactions within tight time constraints.</li>
+                    <li>Creating a seamless user experience that conveyed the 404-error metaphor without explanation.</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- ===== Chapter 02: My Approach ===== -->
+        <header class="case-study-chapter">
+            <span class="case-study-chapter__number">Chapter 02</span>
+            <h2 class="case-study-chapter__title">My approach</h2>
+        </header>
+
+        <section class="case-study-section">
+            <p>The solution focused on building an immersive scroll-driven experience that guides a user from 404 (lost) to 302 (found) through interactive storytelling. Three pillars carried the work:</p>
         </section>
-        <a href="project-library.html" class="back-button" aria-label="Go back to project library">← Back to Project Library</a>
 
-        <!-- Case Study Content -->
-        <article class="case-study" aria-label="Project case study">
-            <section class="case-study-section">
-                <h2>Project Overview</h2>
-                <p>This project was created for the University of Canberras 24-hour Design Challenge with the theme "Lost and Found". The challenge was to create a digital design that explored the concept of being lost and found.</p>
-            </section>
-
-            <section class="case-study-section">
-                <h2>The Issues</h2>
-                <p>24 Hours to completely conceptualise, design, code and deploy a digital design, in my case, an interactive narrative. Specific to my project, issues included:</p>
+        <div class="case-study-columns">
+            <div class="case-study-columns__col">
+                <h3>Concept</h3>
                 <ul>
-                    <li>Devising a narrative that used the theme effectively, requiring quick storyboarding and ideation</li>
-                    <li>Integrating complex scroll interactions required limiting constraints</li>
-                    <li>Creating a seamless user experience that conveyed my use of the theme 404 errors as a metaphor</li>
+                    <li>Explored digital disconnection as the emotional core.</li>
+                    <li>Reframed 404 errors as a metaphor for being "lost" online.</li>
+                    <li>Designed the journey toward "found" as the user's reward, not a given.</li>
+                </ul>
+            </div>
+            <div class="case-study-columns__col">
+                <h3>Design</h3>
+                <ul>
+                    <li>CMD-console aesthetic for familiarity and nostalgia.</li>
+                    <li>Monospaced type with a high-contrast palette to evoke the terminal.</li>
+                    <li>Interaction constraints that enforce the narrative pace.</li>
+                </ul>
+            </div>
+            <div class="case-study-columns__col">
+                <h3>Build</h3>
+                <ul>
+                    <li>GSAP-driven scroll triggers reveal the story progressively.</li>
+                    <li>Click interactions act as deliberate "next-step" prompts.</li>
+                    <li>Deployed to GitHub Pages within the 24-hour window.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="case-study-statement" aria-label="Project concept: 404 to 302">
+            <div class="case-study-statement__line">
+                <span>404</span>
+                <span class="case-study-statement__arrow" aria-hidden="true">&rarr;</span>
+                <span>302</span>
+            </div>
+            <p class="case-study-statement__caption">Lost, then found</p>
+        </div>
+
+        <!-- ===== Chapter 03: What I built (banded for emphasis) ===== -->
+        <div class="case-study-band">
+            <header class="case-study-chapter">
+                <span class="case-study-chapter__number">Chapter 03</span>
+                <h2 class="case-study-chapter__title">What I built</h2>
+            </header>
+            <section class="case-study-section">
+                <ul>
+                    <li><strong>Narrative-controlled progression</strong> - users can only advance by clicking or answering intended prompts, mirroring the deliberate pace of being "lost."</li>
+                    <li><strong>Layered GSAP animation</strong> - split text, glitch effects, and smooth scrolling that reinforce the 'lost' theme.</li>
+                    <li><strong>End-to-end in 24 hours</strong> - conceptualised, designed, built, and deployed within the challenge window.</li>
                 </ul>
             </section>
+        </div>
 
-            <section class="case-study-section">
-                <h2>My Solution</h2>
-                <p>My solution focused on creating an immersive experience using GSAP that guides a user from 404 (lost) to 302 (found) through interactive storytelling and smooth animations.</p>
-                <ul>
-                    <li><strong>Concept Ideation:</strong> Explored digital disconnection, looking at abstractions of being 'lost' online and the emotional journey towards being 'found.'</li>
-                    <li><strong>Design Choices:</strong> CMD Console aesthetic to create a sense of familiarity and nostalgia</li>
-                    <li><strong>Technical Implementation:</strong> Used GSAP (Green Sock Animation Platform) to implement scroll-triggered animations and click interactions to reveal story elements progressively. Making for an intuitive UI.</li>
-                </ul>
-            </section>
+        <section class="case-study-final-cta" aria-label="Try the project">
+            <h2 class="case-study-final-cta__heading">See it for yourself</h2>
+            <p class="case-study-final-cta__intro">The best way to understand the experience is to scroll through it. Try the live demo, or dig into the code.</p>
+            <div class="case-study-final-cta__actions">
+                <a href="https://sassykeyah.github.io/404NotFound/" class="case-study-final-cta__button case-study-final-cta__button--primary" target="_blank" rel="noopener noreferrer" aria-label="Open the live 404: Page Not Found site (opens in new tab)">
+                    Try the live site &rarr;
+                </a>
+                <a href="https://github.com/sassykeyah/404NotFound" class="case-study-final-cta__button case-study-final-cta__button--secondary" target="_blank" rel="noopener noreferrer" aria-label="View the 404: Page Not Found source code on GitHub (opens in new tab)">
+                    View code on GitHub
+                </a>
+            </div>
+        </section>
 
-            <section class="case-study-section">
-                <h2>Key Features</h2>
-                <ul>
-                    <li>Narrative structure that uses interactivity constraints to ensure intended user progression, ie users can only proceed once clicking or answering intended prompts.</li>
-                    <li>Use of GSAP for multiple animations that enhance storytelling and atmosphere, ie split text, glitch effects and smooth scrolling.</li>
-                    <li>Created in under 24 hours.</li>
-                </ul>
-            </section>
-
-            <section class="case-study-section">
-                <h2>View Project</h2>
-                <a href="https://www.youtube.com/watch?v=rgs2gT6WJw0" class="project-link-button" target="_blank" rel="noopener noreferrer" aria-label="Watch the 404: Page Not Found demo video on YouTube (opens in new tab)">Watch Demo</a>
-                <a href="https://github.com/sassykeyah/404NotFound" class="project-link-button" target="_blank" rel="noopener noreferrer" aria-label="View the 404: Page Not Found source code on GitHub (opens in new tab)">View Code on GitHub</a>
-            </section>
-        </article>
+        <a href="project-library.html" class="case-study-next case-study-next--back" aria-label="Back to project library">
+            <span class="case-study-next__label">Back to</span>
+            <span class="case-study-next__title">Project library</span>
+        </a>
     </main>
 
 <footer class="footer">
@@ -91,7 +179,7 @@
             </div>
         </div>
         <div class="footer-info">
-            <p>&copy; 2025 Saskia Day. All rights reserved.</p>
+            <p>&copy; 2026 Saskia Day. All rights reserved.</p>
         </div>
     </div>
 </footer>
