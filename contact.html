@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-      <meta charset="UTF-8">
-    <title>Saskia Day Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Contact - Saskia Day Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/sep3hls.css">
@@ -11,53 +12,51 @@
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/SplitText.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
-     <script src="script.js"></script>
+    <script src="script.js"></script>
 </head>
+
 <body class="contact-page">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="header">
-        <div class="name">Let's Connect</div>
+        <div class="name">Saskia Day</div>
         <nav class="nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="project-library.html">Project Library</a>
             <a href="contact.html" aria-current="page">Contact</a>
         </nav>
     </header>
-    <main id="main-content" class="contact">
-        
-        <h1>I'm always open to discussing new projects or opportunities.</h1>
-        <h1>Send me a message!</h1>
-        <div class="email-container" id="email-hover-area" role="region" aria-label="Contact information">
-            <a href="mailto:saskiaday@hotmail.com" id="email-link" title="Send email to saskiaday@hotmail.com" aria-label="Send email to Saskia Day">
-                <svg viewBox="0 0 1400 350" width="1400" height="350" role="img" aria-labelledby="email-svg-title">
-                    <title id="email-svg-title">Email address: saskiaday@hotmail.com</title>
-                    <path id="email-path" d="M 70,175 Q 700,175 1330,175" />
-                    <text class="email-text">
-                        <textPath href="#email-path" startOffset="50%" text-anchor="middle">
-                            <tspan dy="0">saskiaday@hotmail.com</tspan>
-                        </textPath>
-                    </text>
-                </svg>
-            </a>
-            
-        </div>
-       
+
+    <main id="main-content" class="contact-main">
+        <section class="contact-card" aria-label="Contact">
+            <figure class="contact-photo">
+                <img src="assets/saskia-contact.webp" alt="Portrait of Saskia Day, smiling outdoors in a red cardigan" />
+            </figure>
+            <div class="contact-content">
+                <h1 class="contact-heading">Let's connect</h1>
+                <p class="contact-message">
+                    Whether it's a project, a collaboration, or just a chat about accessible design, I'd love to hear from you.
+                </p>
+                <a href="mailto:saskiaday@hotmail.com" class="contact-cta" aria-label="Send Saskia an email">
+                    Send me an email
+                </a>
+                <p class="contact-meta">I usually reply within a few days.</p>
+            </div>
+        </section>
     </main>
+
     <footer class="footer">
         <div class="footer-content">
             <nav class="footer-nav" aria-label="Footer navigation">
                 <a href="index.html">Home</a>
                 <a href="project-library.html">Project Library</a>
                 <a href="contact.html">Contact</a>
-                <a href="project1.html">24hr Design Competition</a>
-                <a href="project2.html">Spotify Rewind</a>
-                <a href="project3.html">Tactile Maps</a>
             </nav>
             <div class="footer-info">
                 <p>&copy; 2025 Saskia Day. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
+
 </body>
+
 </html>
