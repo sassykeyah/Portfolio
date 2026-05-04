@@ -474,6 +474,32 @@ button:focus,
     }
 }
 
+/* When a pair column wraps an image (e.g. a journey map paired with its summary),
+   inherit the gallery's rounded/shadowed treatment. The wrapping <a> stays a block
+   so the click target covers the whole image. */
+.case-study-pair__col a {
+    display: block;
+}
+
+.case-study-pair__col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow-medium);
+    transition: transform var(--transition-standard), box-shadow var(--transition-standard);
+}
+
+.case-study-pair__col a:hover img,
+.case-study-pair__col a:focus-visible img {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-heavy);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .case-study-pair__col img { transition: none; }
+}
+
 /* Stats block — three large percentages or numbers with captions. */
 .case-study-stats {
     max-width: 1800px;

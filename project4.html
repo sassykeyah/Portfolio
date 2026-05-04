@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Consultant Cafe — Saskia Day Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sep3hls.css">
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <div class="name">Saskia Day</div>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="project-library.html">Project Library</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content" class="project-detail">
+
+        <h1 class="case-study-title">Consultant Cafe — Landing Page Redesign</h1>
+
+        <!-- Metadata strip — fill in the dd values below. Add or remove items as needed. -->
+        <dl class="case-study-meta" aria-label="Project details">
+            <div class="case-study-meta__item">
+                <dt>Role</dt>
+                <dd>[PLACEHOLDER: e.g. Designer &amp; Researcher]</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Client</dt>
+                <dd>Consultant Cafe</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Year</dt>
+                <dd>[PLACEHOLDER: e.g. 2026]</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Duration</dt>
+                <dd>[PLACEHOLDER: e.g. Six weeks]</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Tools</dt>
+                <dd>[PLACEHOLDER: e.g. Figma, FigJam]</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Status</dt>
+                <dd>[PLACEHOLDER: e.g. Prototype delivered]</dd>
+            </div>
+        </dl>
+
+        <!-- At-a-glance overview — one or two sentences. -->
+        <p class="case-study-overview">
+            [PLACEHOLDER: A one-sentence summary of the redesign — what the original landing page failed to do, and how the redesign solved it. Mention the two distinct audiences (business owners and individuals) and that each got their own dedicated landing experience.]
+        </p>
+
+        <!-- Hero Section — drop your hero image into assets/ and update the src + alt below. -->
+        <section class="case-study-hero" aria-label="Project hero image">
+            <img src="assets/[PLACEHOLDER-consultantcafe-hero].webp" alt="[PLACEHOLDER: Describe what the hero image shows, e.g. side-by-side preview of the two redesigned Consultant Cafe landing pages on desktop and mobile, with the business owner version on the left and the individual version on the right]" class="case-study-image">
+        </section>
+
+        <!-- ===== Chapter 01: The Challenge (banded for emphasis) ===== -->
+        <div class="case-study-band">
+            <header class="case-study-chapter">
+                <span class="case-study-chapter__number">Chapter 01</span>
+                <h2 class="case-study-chapter__title">The challenge</h2>
+            </header>
+            <section class="case-study-section">
+                <p>[PLACEHOLDER: Set the scene — the existing Consultant Cafe landing page tried to serve everyone with one homepage, which meant it served no-one well. Two distinct audiences with completely different needs were being funnelled into the same generic experience.]</p>
+                <p>[PLACEHOLDER: A second paragraph that names the constraints / problems explicitly. Then the bulleted list below carries the specific design challenges.]</p>
+                <ul>
+                    <li>[PLACEHOLDER: Challenge 1 — e.g. Splitting a single value proposition into two without diluting either.]</li>
+                    <li>[PLACEHOLDER: Challenge 2 — e.g. Keeping the brand cohesive across two distinct landing experiences.]</li>
+                    <li>[PLACEHOLDER: Challenge 3 — e.g. Designing flows that respected what each audience already knew (or didn't know) about consulting services.]</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- ===== Stats block — three big numbers from your research =====
+             Each item: a number/percentage + a one-line caption. The source line below cites where the data came from. -->
+        <section class="case-study-stats" aria-label="Key research findings">
+            <div class="case-study-stats__item">
+                <span class="case-study-stats__number">[XX%]</span>
+                <p class="case-study-stats__caption">[PLACEHOLDER: One-line description of what this percentage measures — e.g. "of business owners couldn't find pricing within 30 seconds of landing on the homepage."]</p>
+            </div>
+            <div class="case-study-stats__item">
+                <span class="case-study-stats__number">[XX]</span>
+                <p class="case-study-stats__caption">[PLACEHOLDER: One-line description — e.g. "user interviews conducted across both audience segments."]</p>
+            </div>
+            <div class="case-study-stats__item">
+                <span class="case-study-stats__number">[X.X]</span>
+                <p class="case-study-stats__caption">[PLACEHOLDER: One-line description — e.g. "average usability score on the original landing page (out of 7), based on post-task SUS surveys."]</p>
+            </div>
+            <p class="case-study-stats__source" style="grid-column: 1 / -1;">Source: [PLACEHOLDER: Where the numbers come from — e.g. "Saskia Day, user research conducted [Month Year], n = XX."]</p>
+        </section>
+
+        <!-- ===== Chapter 02: Two audiences, two journeys ===== -->
+        <header class="case-study-chapter">
+            <span class="case-study-chapter__number">Chapter 02</span>
+            <h2 class="case-study-chapter__title">Two audiences, two journeys</h2>
+        </header>
+
+        <section class="case-study-section">
+            <p>[PLACEHOLDER: One short paragraph explaining why the redesign needed two distinct journey maps — what's fundamentally different between how a business owner approaches consulting services vs. how an individual does. This frames the two journey maps that follow.]</p>
+        </section>
+
+        <!-- Journey map 1: Business owner — image left, summary right. Click image to open at full resolution.
+             Replace the two image paths with your exported map (use the SAME file for src and the wrapping href so the click opens the full-size version in a new tab). -->
+        <div class="case-study-pair">
+            <div class="case-study-pair__col">
+                <a href="assets/[PLACEHOLDER-consultantcafe-journey-business].webp"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Open the business owner customer journey map at full resolution in a new tab">
+                    <img src="assets/[PLACEHOLDER-consultantcafe-journey-business].webp"
+                         alt="[PLACEHOLDER: Describe the journey map visually for screen readers — e.g. 'Customer journey map for business owners visiting Consultant Cafe, charting five stages (awareness, research, evaluation, booking, follow-up) with the user's emotional state, key actions, and pain points at each stage.' This is the screen-reader-accessible summary of the image content.]">
+                </a>
+            </div>
+            <div class="case-study-pair__col">
+                <h3>Business owner journey</h3>
+                <p>[PLACEHOLDER: One short sentence framing this audience — e.g. "Time-poor decision-makers looking for measurable ROI before they even click through."]</p>
+                <ul>
+                    <li>[PLACEHOLDER: Stage 1 — e.g. <strong>Awareness:</strong> arrives via LinkedIn or peer referral.]</li>
+                    <li>[PLACEHOLDER: Stage 2 — e.g. <strong>Research:</strong> needs case studies and pricing within reach.]</li>
+                    <li>[PLACEHOLDER: Stage 3 — e.g. <strong>Evaluation:</strong> wants to see who they'd actually be working with.]</li>
+                    <li>[PLACEHOLDER: Stage 4 — e.g. <strong>Booking:</strong> expects a calendar, not a contact form.]</li>
+                    <li>[PLACEHOLDER: Stage 5 — e.g. <strong>Follow-up:</strong> needs clear next steps after the consult.]</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Journey map 2: Individual — same pattern. -->
+        <div class="case-study-pair">
+            <div class="case-study-pair__col">
+                <a href="assets/[PLACEHOLDER-consultantcafe-journey-individual].webp"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Open the individual customer journey map at full resolution in a new tab">
+                    <img src="assets/[PLACEHOLDER-consultantcafe-journey-individual].webp"
+                         alt="[PLACEHOLDER: Describe the individual journey map visually for screen readers — e.g. 'Customer journey map for individuals visiting Consultant Cafe, charting five stages with the user's emotional state, actions, and the friction points encountered at each stage.']">
+                </a>
+            </div>
+            <div class="case-study-pair__col">
+                <h3>Individual journey</h3>
+                <p>[PLACEHOLDER: One short sentence framing this audience — e.g. "First-time consultees who don't yet know what they need, only that they need help."]</p>
+                <ul>
+                    <li>[PLACEHOLDER: Stage 1 — e.g. <strong>Awareness:</strong> arrives via search or social referral, often anxious.]</li>
+                    <li>[PLACEHOLDER: Stage 2 — e.g. <strong>Research:</strong> needs plain-language explanations, not jargon.]</li>
+                    <li>[PLACEHOLDER: Stage 3 — e.g. <strong>Trust-building:</strong> reads testimonials before pricing.]</li>
+                    <li>[PLACEHOLDER: Stage 4 — e.g. <strong>Booking:</strong> wants reassurance the first session is low-stakes.]</li>
+                    <li>[PLACEHOLDER: Stage 5 — e.g. <strong>Follow-up:</strong> expects gentle, opt-in continuation, not sales pressure.]</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== Chapter 03: What I built (banded for emphasis) ===== -->
+        <div class="case-study-band">
+            <header class="case-study-chapter">
+                <span class="case-study-chapter__number">Chapter 03</span>
+                <h2 class="case-study-chapter__title">What I built</h2>
+            </header>
+            <section class="case-study-section">
+                <ul>
+                    <li><strong>[PLACEHOLDER: Deliverable 1]</strong> — [PLACEHOLDER: e.g. Two distinct landing pages, each with its own value proposition, layout, and conversion path — sharing the brand system but nothing else.]</li>
+                    <li><strong>[PLACEHOLDER: Deliverable 2]</strong> — [PLACEHOLDER: e.g. A unified design system underpinning both pages, so future content updates only need to be made once.]</li>
+                    <li><strong>[PLACEHOLDER: Deliverable 3]</strong> — [PLACEHOLDER: e.g. Interactive prototypes for each page, tested with five users from each audience segment.]</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- ===== Prototype embeds — one for each landing page =====
+             Replace the iframe src with your Figma share link in embed format:
+             https://www.figma.com/embed?embed_host=share&url=<URL-ENCODED-FIGMA-PROTOTYPE-URL>
+             Or grab the embed code directly from Figma: Share → Get embed code. -->
+        <figure class="case-study-embed" aria-label="Business owner landing page prototype">
+            <div class="case-study-embed__frame">
+                <iframe
+                    src="[PLACEHOLDER: Figma embed URL for the business owner prototype]"
+                    title="Consultant Cafe — business owner landing page prototype"
+                    loading="lazy"
+                    allowfullscreen></iframe>
+            </div>
+            <figcaption class="case-study-embed__caption">Business owner landing page — interactive prototype.</figcaption>
+        </figure>
+
+        <figure class="case-study-embed" aria-label="Individual landing page prototype">
+            <div class="case-study-embed__frame">
+                <iframe
+                    src="[PLACEHOLDER: Figma embed URL for the individual prototype]"
+                    title="Consultant Cafe — individual landing page prototype"
+                    loading="lazy"
+                    allowfullscreen></iframe>
+            </div>
+            <figcaption class="case-study-embed__caption">Individual landing page — interactive prototype.</figcaption>
+        </figure>
+
+        <!-- Final CTA — link out to the live Figma file (or remove this section if you'd rather the embeds carry the call to action). -->
+        <section class="case-study-final-cta" aria-label="Try the prototype">
+            <h2 class="case-study-final-cta__heading">Try the prototype</h2>
+            <p class="case-study-final-cta__intro">Open the prototypes full-screen in Figma to click through both landing experiences end-to-end.</p>
+            <div class="case-study-final-cta__actions">
+                <a href="[PLACEHOLDER: Figma share URL — business owner]" class="case-study-final-cta__button case-study-final-cta__button--primary" target="_blank" rel="noopener noreferrer" aria-label="Open the business owner prototype in Figma (opens in new tab)">
+                    Business owner prototype &rarr;
+                </a>
+                <a href="[PLACEHOLDER: Figma share URL — individual]" class="case-study-final-cta__button case-study-final-cta__button--secondary" target="_blank" rel="noopener noreferrer" aria-label="Open the individual prototype in Figma (opens in new tab)">
+                    Individual prototype
+                </a>
+            </div>
+        </section>
+
+        <a href="project-library.html" class="case-study-next case-study-next--back" aria-label="Back to project library">
+            <span class="case-study-next__label">Back to</span>
+            <span class="case-study-next__title">Project library</span>
+        </a>
+    </main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-main">
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="project-library.html">Project Library</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="footer-cta">
+                <p class="footer-cta-label">Let's connect</p>
+                <a href="mailto:saskiaday@hotmail.com" class="footer-email">saskiaday@hotmail.com</a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2026 Saskia Day. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
