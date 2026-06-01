@@ -31,6 +31,17 @@ const PROJECTS = [
     year: "2024",
     featured: true,
     href: "project3.html"
+  },
+  {
+    id: "consultant-cafe",
+    type: "web",
+    title: "Consultant Cafe — Landing Page Redesign",
+    summary: "End-to-end redesign of Consultant Cafe's landing page — from journey maps to high-fidelity Figma prototypes to a custom Ghost CMS build.",
+    thumbnail: "assets/HeroMockUpProject4.svg",
+    thumbnailAlt: "Preview of the redesigned Consultant Cafe landing pages, showing the business owner and individual variants side by side",
+    year: "2026",
+    featured: true,
+    href: "project4.html"
   }
 ];
 

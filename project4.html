@@ -27,11 +27,11 @@
 
         <h1 class="case-study-title">Consultant Cafe — Landing Page Redesign</h1>
 
-        <!-- Metadata strip — fill in the dd values below. Add or remove items as needed. -->
+        <!-- Metadata strip -->
         <dl class="case-study-meta" aria-label="Project details">
             <div class="case-study-meta__item">
                 <dt>Role</dt>
-                <dd>[PLACEHOLDER: e.g. Designer &amp; Researcher]</dd>
+                <dd>Designer &amp; Developer</dd>
             </div>
             <div class="case-study-meta__item">
                 <dt>Client</dt>
@@ -39,30 +39,30 @@
             </div>
             <div class="case-study-meta__item">
                 <dt>Year</dt>
-                <dd>[PLACEHOLDER: e.g. 2026]</dd>
+                <dd>2026</dd>
             </div>
             <div class="case-study-meta__item">
                 <dt>Duration</dt>
-                <dd>[PLACEHOLDER: e.g. Six weeks]</dd>
+                <dd>Multi-month, end-to-end</dd>
             </div>
             <div class="case-study-meta__item">
                 <dt>Tools</dt>
-                <dd>[PLACEHOLDER: e.g. Figma, FigJam]</dd>
+                <dd>Figma, FigJam, VS Code, Ghost CMS, HTML, CSS, JavaScript</dd>
             </div>
             <div class="case-study-meta__item">
                 <dt>Status</dt>
-                <dd>[PLACEHOLDER: e.g. Prototype delivered]</dd>
+                <dd>Built, awaiting launch</dd>
             </div>
         </dl>
 
-        <!-- At-a-glance overview — one or two sentences. -->
+        <!-- At-a-glance overview -->
         <p class="case-study-overview">
-            [PLACEHOLDER: A one-sentence summary of the redesign — what the original landing page failed to do, and how the redesign solved it. Mention the two distinct audiences (business owners and individuals) and that each got their own dedicated landing experience.]
+            An end-to-end redesign of the Consultant Cafe landing page. From journey maps and wireframes, through high-fidelity Figma mockups, into a custom Ghost CMS build written in VS Code. 
         </p>
 
-        <!-- Hero Section — drop your hero image into assets/ and update the src + alt below. -->
+        <!-- Hero Section -->
         <section class="case-study-hero" aria-label="Project hero image">
-            <img src="assets/[PLACEHOLDER-consultantcafe-hero].webp" alt="[PLACEHOLDER: Describe what the hero image shows, e.g. side-by-side preview of the two redesigned Consultant Cafe landing pages on desktop and mobile, with the business owner version on the left and the individual version on the right]" class="case-study-image">
+            <img src="assets/HeroMockUpProject4.svg" alt="Side-by-side preview of the two redesigned Consultant Cafe landing pages, with the business owner variant on one side and the individual variant on the other, showing the same underlying design adapted for each audience." class="case-study-image">
         </section>
 
         <!-- ===== Chapter 01: The Challenge (banded for emphasis) ===== -->
@@ -72,144 +72,181 @@
                 <h2 class="case-study-chapter__title">The challenge</h2>
             </header>
             <section class="case-study-section">
-                <p>[PLACEHOLDER: Set the scene — the existing Consultant Cafe landing page tried to serve everyone with one homepage, which meant it served no-one well. Two distinct audiences with completely different needs were being funnelled into the same generic experience.]</p>
-                <p>[PLACEHOLDER: A second paragraph that names the constraints / problems explicitly. Then the bulleted list below carries the specific design challenges.]</p>
+                <p>The existing Consultant Cafe landing page tried to serve everyone with one homepage, which meant it served no-one well. Two distinct audiences with very different needs were being funnelled into the same generic experience. Business owners were looking for measurable ROI, and individuals for personal guidance.</p>
+                <p>The brief was broader than a visual refresh. I was responsible for the redesign end-to-end: research and journey mapping, wireframes, high-fidelity prototypes in Figma, and the production build inside the live Ghost CMS theme. Three things made it harder than a normal landing page:</p>
                 <ul>
-                    <li>[PLACEHOLDER: Challenge 1 — e.g. Splitting a single value proposition into two without diluting either.]</li>
-                    <li>[PLACEHOLDER: Challenge 2 — e.g. Keeping the brand cohesive across two distinct landing experiences.]</li>
-                    <li>[PLACEHOLDER: Challenge 3 — e.g. Designing flows that respected what each audience already knew (or didn't know) about consulting services.]</li>
+                    <li>Two pages had to share one design but feel made for different people.</li>
+                    <li>Each page had to make its audience feel understood.</li>
+                    <li>The design had to look the same in Ghost as it did in Figma.</li>
                 </ul>
             </section>
         </div>
-
-        <!-- ===== Stats block — three big numbers from your research =====
-             Each item: a number/percentage + a one-line caption. The source line below cites where the data came from. -->
-        <section class="case-study-stats" aria-label="Key research findings">
-            <div class="case-study-stats__item">
-                <span class="case-study-stats__number">[XX%]</span>
-                <p class="case-study-stats__caption">[PLACEHOLDER: One-line description of what this percentage measures — e.g. "of business owners couldn't find pricing within 30 seconds of landing on the homepage."]</p>
-            </div>
-            <div class="case-study-stats__item">
-                <span class="case-study-stats__number">[XX]</span>
-                <p class="case-study-stats__caption">[PLACEHOLDER: One-line description — e.g. "user interviews conducted across both audience segments."]</p>
-            </div>
-            <div class="case-study-stats__item">
-                <span class="case-study-stats__number">[X.X]</span>
-                <p class="case-study-stats__caption">[PLACEHOLDER: One-line description — e.g. "average usability score on the original landing page (out of 7), based on post-task SUS surveys."]</p>
-            </div>
-            <p class="case-study-stats__source" style="grid-column: 1 / -1;">Source: [PLACEHOLDER: Where the numbers come from — e.g. "Saskia Day, user research conducted [Month Year], n = XX."]</p>
-        </section>
 
         <!-- ===== Chapter 02: Two audiences, two journeys ===== -->
         <header class="case-study-chapter">
             <span class="case-study-chapter__number">Chapter 02</span>
-            <h2 class="case-study-chapter__title">Two audiences, two journeys</h2>
+            <h2 class="case-study-chapter__title">Ideation and user personas</h2>
         </header>
 
         <section class="case-study-section">
-            <p>[PLACEHOLDER: One short paragraph explaining why the redesign needed two distinct journey maps — what's fundamentally different between how a business owner approaches consulting services vs. how an individual does. This frames the two journey maps that follow.]</p>
+            <p>I built journey maps for each audience. Side by side, they revealed both groups of people naviagate through a similar journey. The structure needed to stay the same for both, whilst the content had to be different.</p>
         </section>
 
-        <!-- Journey map 1: Business owner — image left, summary right. Click image to open at full resolution.
-             Replace the two image paths with your exported map (use the SAME file for src and the wrapping href so the click opens the full-size version in a new tab). -->
-        <div class="case-study-pair">
-            <div class="case-study-pair__col">
-                <a href="assets/[PLACEHOLDER-consultantcafe-journey-business].webp"
+        <!-- Journey map 1: Business owner -->
+        <div class="case-study-pair case-study-pair--single">
+            <div class="case-study-pair__col case-study-pair__col--zoom">
+                <h3>Business</h3>
+                <a href="assets/journey-map-business.webp"
                    target="_blank"
                    rel="noopener noreferrer"
-                   aria-label="Open the business owner customer journey map at full resolution in a new tab">
-                    <img src="assets/[PLACEHOLDER-consultantcafe-journey-business].webp"
-                         alt="[PLACEHOLDER: Describe the journey map visually for screen readers — e.g. 'Customer journey map for business owners visiting Consultant Cafe, charting five stages (awareness, research, evaluation, booking, follow-up) with the user's emotional state, key actions, and pain points at each stage.' This is the screen-reader-accessible summary of the image content.]">
+                   aria-label="Open the business customer journey map at full size">
+                    <span class="zoom-hint" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <circle cx="11" cy="11" r="7"/>
+                            <line x1="21" y1="21" x2="16.5" y2="16.5"/>
+                            <line x1="11" y1="8" x2="11" y2="14"/>
+                            <line x1="8" y1="11" x2="14" y2="11"/>
+                        </svg>
+                        Click to expand
+                    </span>
+                    <img src="assets/journey-map-business.webp"
+                         alt="Customer journey map for businesses approaching Consultant Cafe, charting their path from initial struggle through to subscribing, with emotional state, key actions, and pain points called out at each moment.">
                 </a>
-            </div>
-            <div class="case-study-pair__col">
-                <h3>Business owner journey</h3>
-                <p>[PLACEHOLDER: One short sentence framing this audience — e.g. "Time-poor decision-makers looking for measurable ROI before they even click through."]</p>
-                <ul>
-                    <li>[PLACEHOLDER: Stage 1 — e.g. <strong>Awareness:</strong> arrives via LinkedIn or peer referral.]</li>
-                    <li>[PLACEHOLDER: Stage 2 — e.g. <strong>Research:</strong> needs case studies and pricing within reach.]</li>
-                    <li>[PLACEHOLDER: Stage 3 — e.g. <strong>Evaluation:</strong> wants to see who they'd actually be working with.]</li>
-                    <li>[PLACEHOLDER: Stage 4 — e.g. <strong>Booking:</strong> expects a calendar, not a contact form.]</li>
-                    <li>[PLACEHOLDER: Stage 5 — e.g. <strong>Follow-up:</strong> needs clear next steps after the consult.]</li>
-                </ul>
             </div>
         </div>
 
-        <!-- Journey map 2: Individual — same pattern. -->
-        <div class="case-study-pair">
-            <div class="case-study-pair__col">
-                <a href="assets/[PLACEHOLDER-consultantcafe-journey-individual].webp"
+        <!-- Journey map 2: Individual -->
+        <div class="case-study-pair case-study-pair--single">
+            <div class="case-study-pair__col case-study-pair__col--zoom">
+                <h3>Individual</h3>
+                <a href="assets/journey-map-individual.webp"
                    target="_blank"
                    rel="noopener noreferrer"
-                   aria-label="Open the individual customer journey map at full resolution in a new tab">
-                    <img src="assets/[PLACEHOLDER-consultantcafe-journey-individual].webp"
-                         alt="[PLACEHOLDER: Describe the individual journey map visually for screen readers — e.g. 'Customer journey map for individuals visiting Consultant Cafe, charting five stages with the user's emotional state, actions, and the friction points encountered at each stage.']">
+                   aria-label="Open the individual customer journey map at full size">
+                    <span class="zoom-hint" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <circle cx="11" cy="11" r="7"/>
+                            <line x1="21" y1="21" x2="16.5" y2="16.5"/>
+                            <line x1="11" y1="8" x2="11" y2="14"/>
+                            <line x1="8" y1="11" x2="14" y2="11"/>
+                        </svg>
+                        Click to expand
+                    </span>
+                    <img src="assets/journey-map-individual.webp"
+                         alt="Customer journey map for individuals approaching Consultant Cafe, charting their path from initial struggle through to subscribing, with emotional state, actions, and friction points called out at each moment.">
                 </a>
-            </div>
-            <div class="case-study-pair__col">
-                <h3>Individual journey</h3>
-                <p>[PLACEHOLDER: One short sentence framing this audience — e.g. "First-time consultees who don't yet know what they need, only that they need help."]</p>
-                <ul>
-                    <li>[PLACEHOLDER: Stage 1 — e.g. <strong>Awareness:</strong> arrives via search or social referral, often anxious.]</li>
-                    <li>[PLACEHOLDER: Stage 2 — e.g. <strong>Research:</strong> needs plain-language explanations, not jargon.]</li>
-                    <li>[PLACEHOLDER: Stage 3 — e.g. <strong>Trust-building:</strong> reads testimonials before pricing.]</li>
-                    <li>[PLACEHOLDER: Stage 4 — e.g. <strong>Booking:</strong> wants reassurance the first session is low-stakes.]</li>
-                    <li>[PLACEHOLDER: Stage 5 — e.g. <strong>Follow-up:</strong> expects gentle, opt-in continuation, not sales pressure.]</li>
-                </ul>
             </div>
         </div>
 
-        <!-- ===== Chapter 03: What I built (banded for emphasis) ===== -->
+        <!-- ===== Insights surfaced during the project. Two researched percentages,
+             one per audience. Each stat carries its own title (the finding) and its
+             own inline source citation. ===== -->
+        <section class="case-study-stats case-study-stats--two" aria-label="Insights from the project research">
+            <h3 class="case-study-stats__heading">I discovered that&hellip;</h3>
+            <div class="case-study-stats__item">
+                <span class="case-study-stats__number">44%</span>
+                <p class="case-study-stats__caption">decrease in entry-level hiring reported by some Big Four firms.</p>
+                <h4 class="case-study-stats__title">Early career consultants are under pressure, and losing confidence.</h4>
+                <p class="case-study-stats__source">Source: Observer UK, 2025.</p>
+            </div>
+            <div class="case-study-stats__item">
+                <span class="case-study-stats__number">88%</span>
+                <p class="case-study-stats__caption">of organisations identify retention as a top concern.</p>
+                <h4 class="case-study-stats__title">Businesses are under pressure too, and retention is the loudest worry.</h4>
+                <p class="case-study-stats__source">Source: Harvard Business School, 2025.</p>
+            </div>
+            <p class="case-study-stats__synthesis"><strong>Different pressures, same problem.</strong> Both audiences needed a to access information and guidance that simplifed the complex journey.</p>
+        </section>
+
+        <!-- ===== Chapter 03: Wireframing the shared structure ===== -->
+        <header class="case-study-chapter">
+            <span class="case-study-chapter__number">Chapter 03</span>
+            <h2 class="case-study-chapter__title">Wireframing</h2>
+        </header>
+
+        <section class="case-study-section">
+            <p>With user insights in mind, I wireframed a singular page architecture for both audiences. Layout, content hierarchy, and CTA placement stayed consistent across the board.Imagery, copy, and iconography became the variables that flexed per landing page.</p>
+        </section>
+
+        <!-- Wireframe gallery. Drop the mobile and desktop wireframe screenshots into the two figures below.
+             If you only have a single wireframe artifact, delete the second <figure> and the gallery will collapse. -->
+        <div class="case-study-gallery case-study-gallery--two" role="list" aria-label="Wireframes of the unified landing-page structure">
+            <figure role="listitem">
+                <img src="assets/[PLACEHOLDER-consultantcafe-wireframe-mobile].webp"
+                     alt="[PLACEHOLDER: Describe the mobile wireframe, e.g. 'Low-fidelity greyscale wireframe of the unified landing page on mobile, showing the page architecture, content hierarchy, and CTA placement shared across both audience variants.']">
+                <figcaption>Mobile wireframe.</figcaption>
+            </figure>
+            <figure role="listitem">
+                <img src="assets/[PLACEHOLDER-consultantcafe-wireframe-desktop].webp"
+                     alt="[PLACEHOLDER: Describe the desktop wireframe, e.g. 'Low-fidelity greyscale wireframe of the unified landing page on desktop, showing the same page architecture and content hierarchy scaled up for wider viewports.']">
+                <figcaption>Desktop wireframe.</figcaption>
+            </figure>
+        </div>
+
+        <!-- ===== Chapter 04: One design, two variants ===== -->
+        <header class="case-study-chapter">
+            <span class="case-study-chapter__number">Chapter 04</span>
+            <h2 class="case-study-chapter__title">High fidelity mockups</h2>
+        </header>
+
+        <section class="case-study-section">
+            <p>From the wireframes, I built one full-colour, mobile-first mockup in Figma against the Consultant Cafe brand system. Then I produced two variants of the same design, one for businesses and one for individuals, swapping the images, copy, and icons at each stage to speak to each audience without touching the underlying layout.</p>
+        </section>
+
+        <!-- Final mockup gallery. Same physical design, two audience variants.
+             Drop the business and individual mockup screenshots into the two figures below. -->
+        <div class="case-study-gallery case-study-gallery--two" role="list" aria-label="Final high-fidelity mockups: one shared design shown with each audience's images, copy, and icons">
+            <figure role="listitem">
+                <img src="assets/[PLACEHOLDER-consultantcafe-mockup-business].webp"
+                     alt="[PLACEHOLDER: Describe the business variant, e.g. 'High-fidelity mockup of the unified landing page with the business variant applied: business-focused hero imagery, ROI-led copy, and business-specific iconography throughout.']">
+                <figcaption>Same design, business variant.</figcaption>
+            </figure>
+            <figure role="listitem">
+                <img src="assets/[PLACEHOLDER-consultantcafe-mockup-individual].webp"
+                     alt="[PLACEHOLDER: Describe the individual variant, e.g. 'High-fidelity mockup of the unified landing page with the individual variant applied: warmer hero imagery, plain-language copy, and individual-focused iconography throughout.']">
+                <figcaption>Same design, individual variant.</figcaption>
+            </figure>
+        </div>
+
+        <!-- ===== Chapter 05: Building it in Ghost CMS (banded for emphasis) ===== -->
         <div class="case-study-band">
             <header class="case-study-chapter">
-                <span class="case-study-chapter__number">Chapter 03</span>
-                <h2 class="case-study-chapter__title">What I built</h2>
+                <span class="case-study-chapter__number">Chapter 05</span>
+                <h2 class="case-study-chapter__title">Building it in Ghost</h2>
             </header>
             <section class="case-study-section">
+                <p>Handing the design to a developer wasn't the brief. I built it. Working in VS Code against Consultant Cafe's Ghost theme, I translated the Figma design into Handlebars templates, semantic HTML, and the CSS and JavaScript that backs them. Because the journey-map insight led to a single shared design, the build is one landing template, with the images, copy, and icons editable by the team inside the Ghost admin to suit either audience.</p>
                 <ul>
-                    <li><strong>[PLACEHOLDER: Deliverable 1]</strong> — [PLACEHOLDER: e.g. Two distinct landing pages, each with its own value proposition, layout, and conversion path — sharing the brand system but nothing else.]</li>
-                    <li><strong>[PLACEHOLDER: Deliverable 2]</strong> — [PLACEHOLDER: e.g. A unified design system underpinning both pages, so future content updates only need to be made once.]</li>
-                    <li><strong>[PLACEHOLDER: Deliverable 3]</strong> — [PLACEHOLDER: e.g. Interactive prototypes for each page, tested with five users from each audience segment.]</li>
+                    <li><strong>Theme work in VS Code.</strong> Extended the existing Ghost theme with one new landing template, keeping the rest of the site untouched.</li>
+                    <li><strong>Design-to-code fidelity.</strong> Rebuilt the Figma design as HTML and CSS, so the production page matches the mockup pixel-for-pixel.</li>
+                    <li><strong>Mobile-first, accessibility-first.</strong> Semantic markup, keyboard-reachable navigation, alt text, and ARIA labelling carried through from the design into the live theme.</li>
+                    <li><strong>Editor-friendly.</strong> Structured the template so the Consultant Cafe team can swap between business and individual images, copy, and icons in the Ghost admin without breaking the layout.</li>
                 </ul>
             </section>
         </div>
 
-        <!-- ===== Prototype embeds — one for each landing page =====
-             Replace the iframe src with your Figma share link in embed format:
-             https://www.figma.com/embed?embed_host=share&url=<URL-ENCODED-FIGMA-PROTOTYPE-URL>
-             Or grab the embed code directly from Figma: Share → Get embed code. -->
-        <figure class="case-study-embed" aria-label="Business owner landing page prototype">
-            <div class="case-study-embed__frame">
-                <iframe
-                    src="[PLACEHOLDER: Figma embed URL for the business owner prototype]"
-                    title="Consultant Cafe — business owner landing page prototype"
-                    loading="lazy"
-                    allowfullscreen></iframe>
-            </div>
-            <figcaption class="case-study-embed__caption">Business owner landing page — interactive prototype.</figcaption>
-        </figure>
+        <!-- ===== Chapter 06: What I delivered (banded for emphasis) ===== -->
+        <div class="case-study-band case-study-band--green">
+            <header class="case-study-chapter">
+                <span class="case-study-chapter__number">Chapter 06</span>
+                <h2 class="case-study-chapter__title">What I delivered</h2>
+            </header>
+            <section class="case-study-section">
+                <ul>
+                    <li><strong>Two journey maps.</strong> One for businesses, one for individuals. Together they surfaced the shared-journey insight underpinning everything that followed.</li>
+                    <li><strong>One wireframe, one mockup, two variants.</strong> The full Figma trail from low-fi structure to a single high-fidelity design, shown with each audience's images, copy, and icons applied.</li>
+                    <li><strong>One unified Ghost CMS build.</strong> The redesign coded into Consultant Cafe's live Ghost theme in VS Code, with the audience-specific images, copy, and icons editable by the team in the Ghost admin.</li>
+                </ul>
+            </section>
+        </div>
 
-        <figure class="case-study-embed" aria-label="Individual landing page prototype">
-            <div class="case-study-embed__frame">
-                <iframe
-                    src="[PLACEHOLDER: Figma embed URL for the individual prototype]"
-                    title="Consultant Cafe — individual landing page prototype"
-                    loading="lazy"
-                    allowfullscreen></iframe>
-            </div>
-            <figcaption class="case-study-embed__caption">Individual landing page — interactive prototype.</figcaption>
-        </figure>
-
-        <!-- Final CTA — link out to the live Figma file (or remove this section if you'd rather the embeds carry the call to action). -->
-        <section class="case-study-final-cta" aria-label="Try the prototype">
-            <h2 class="case-study-final-cta__heading">Try the prototype</h2>
-            <p class="case-study-final-cta__intro">Open the prototypes full-screen in Figma to click through both landing experiences end-to-end.</p>
+        <!-- Final CTA. Swap the placeholder URL for the live Consultant Cafe URL once the redesign goes live. -->
+        <section class="case-study-final-cta" aria-label="See the live site">
+            <h2 class="case-study-final-cta__heading">See it live</h2>
+            <p class="case-study-final-cta__intro">The redesign goes live on the Consultant Cafe site soon. Once it ships, this link will take you straight to it.</p>
             <div class="case-study-final-cta__actions">
-                <a href="[PLACEHOLDER: Figma share URL — business owner]" class="case-study-final-cta__button case-study-final-cta__button--primary" target="_blank" rel="noopener noreferrer" aria-label="Open the business owner prototype in Figma (opens in new tab)">
-                    Business owner prototype &rarr;
-                </a>
-                <a href="[PLACEHOLDER: Figma share URL — individual]" class="case-study-final-cta__button case-study-final-cta__button--secondary" target="_blank" rel="noopener noreferrer" aria-label="Open the individual prototype in Figma (opens in new tab)">
-                    Individual prototype
+                <a href="[PLACEHOLDER: Live Consultant Cafe URL]" class="case-study-final-cta__button case-study-final-cta__button--primary" target="_blank" rel="noopener noreferrer" aria-label="Visit the live Consultant Cafe site (opens in new tab)">
+                    Visit the live site &rarr;
                 </a>
             </div>
         </section>
@@ -218,6 +255,12 @@
             <span class="case-study-next__label">Back to</span>
             <span class="case-study-next__title">Project library</span>
         </a>
+
+        <!-- Lightbox modal. Populated and toggled by setupLightbox() in script.js. -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Full-size image viewer" hidden>
+            <button type="button" class="lightbox__close" aria-label="Close image viewer">&times;</button>
+            <img class="lightbox__image" src="" alt="">
+        </div>
     </main>
 
 <footer class="footer">

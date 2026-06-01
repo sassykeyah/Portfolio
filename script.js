@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Render data-driven UI first so it runs before anything else that might throw.
   try { setupCarousel(); } catch (err) { console.error('[carousel] setup failed:', err); }
   try { setupLibrary();  } catch (err) { console.error('[library] setup failed:', err); }
+  try { setupLightbox(); } catch (err) { console.error('[lightbox] setup failed:', err); }
 
   // Header styling: cream background with green name + dark nav on every page.
   const header = document.querySelector('.header');
@@ -212,5 +213,50 @@ document.addEventListener("DOMContentLoaded", function() {
     render();
   }
 
+  // ===== LIGHTBOX — click a zoomable image to open it full-screen in an overlay =====
+  function setupLightbox() {
+    const triggers = document.querySelectorAll('.case-study-pair__col--zoom a');
+    if (triggers.length === 0) return;
+
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+    const lightboxImg = lightbox.querySelector('.lightbox__image');
+    const closeBtn = lightbox.querySelector('.lightbox__close');
+    let lastFocused = null;
+
+    function open(src, alt) {
+      lastFocused = document.activeElement;
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || '';
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function close() {
+      lightbox.hidden = true;
+      lightboxImg.src = '';
+      lightboxImg.alt = '';
+      document.body.style.overflow = '';
+      if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+    }
+
+    triggers.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const img = link.querySelector('img');
+        open(link.getAttribute('href'), img ? img.alt : '');
+      });
+    });
+
+    closeBtn.addEventListener('click', close);
+    lightbox.addEventListener('click', (e) => {
+      // Click on the backdrop (or the image itself) closes the lightbox.
+      if (e.target === lightbox || e.target === lightboxImg) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.hidden) close();
+    });
+  }
 
 });

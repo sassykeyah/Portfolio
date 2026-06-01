@@ -472,6 +472,9 @@ button:focus,
         grid-template-columns: 1fr 1fr;
         gap: 4em;
     }
+    .case-study-pair--single {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* When a pair column wraps an image (e.g. a journey map paired with its summary),
@@ -498,6 +501,99 @@ button:focus,
 
 @media (prefers-reduced-motion: reduce) {
     .case-study-pair__col img { transition: none; }
+}
+
+/* Lightbox-trigger variant for dense images (journey maps etc.) — JS intercepts
+   the click and opens the image in the in-page lightbox modal. The persistent
+   "Click to expand" hint signals the affordance on both touch and desktop;
+   without JS, the link's target="_blank" still opens the full-resolution file in
+   a new tab as a graceful fallback. */
+.case-study-pair__col--zoom a {
+    position: relative;
+    display: block;
+    cursor: zoom-in;
+}
+
+.case-study-pair__col--zoom .zoom-hint {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.45em 0.85em;
+    background: rgba(0, 0, 0, 0.78);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 999px;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: background var(--transition-standard);
+}
+
+.case-study-pair__col--zoom .zoom-hint svg {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
+
+.case-study-pair__col--zoom a:hover .zoom-hint,
+.case-study-pair__col--zoom a:focus-visible .zoom-hint {
+    background: var(--primary-color, #000);
+}
+
+/* ===== Lightbox modal — opens full-screen when a zoomable image is clicked ===== */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1rem, 4vw, 3rem);
+}
+
+.lightbox[hidden] { display: none; }
+
+.lightbox__image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: zoom-out;
+    box-shadow: var(--box-shadow-heavy);
+}
+
+.lightbox__close {
+    position: absolute;
+    top: clamp(0.75rem, 2vw, 1.5rem);
+    right: clamp(0.75rem, 2vw, 1.5rem);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition-standard);
+}
+
+.lightbox__close:hover,
+.lightbox__close:focus-visible {
+    background: rgba(0, 0, 0, 0.9);
+    outline: none;
 }
 
 /* Stats block — three large percentages or numbers with captions. */
@@ -533,16 +629,49 @@ button:focus,
 }
 
 .case-study-stats__source {
+    grid-column: 1 / -1;
     font-size: 0.85em;
     opacity: 0.55;
     margin-top: 0.6em;
     font-style: italic;
 }
 
+.case-study-stats__heading {
+    grid-column: 1 / -1;
+    margin: 0 0 0.5em;
+    font-size: clamp(1.4em, 2.4vw, 1.9em);
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.case-study-stats__title {
+    margin: 0 0 0.2em;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    line-height: 1.35;
+}
+
+.case-study-stats__synthesis {
+    grid-column: 1 / -1;
+    margin: 1.5em auto 0;
+    padding-top: 1.5em;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: clamp(1.05em, 1.5vw, 1.25em);
+    line-height: 1.5;
+    color: var(--secondary-color);
+    text-align: center;
+    max-width: 60ch;
+}
+
 @media (min-width: 768px) {
     .case-study-stats {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+    }
+    .case-study-stats--two {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
