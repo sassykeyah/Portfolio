@@ -186,25 +186,23 @@
         <!-- ===== Chapter 04: One design, two variants ===== -->
         <header class="case-study-chapter">
             <span class="case-study-chapter__number">Chapter 04</span>
-            <h2 class="case-study-chapter__title">High fidelity mockups</h2>
+            <h2 class="case-study-chapter__title">High fidelity mockus</h2>
         </header>
 
         <section class="case-study-section">
-            <p>From the wireframes, I built one full-colour, mobile-first mockup in Figma against the Consultant Cafe brand system. Then I produced two variants of the same design, one for businesses and one for individuals, swapping the images, copy, and icons at each stage to speak to each audience without touching the underlying layout.</p>
+            <p>From the wireframes, I built one full-colour mockup in Figma against the Consultant Cafe brand system. I then produced the design as a single audience variant, swapping the images, copy, and icons to speak to one audience without touching the underlying layout.</p>
         </section>
 
-        <!-- Final mockup gallery. Same physical design, two audience variants.
-             Drop the business and individual mockup screenshots into the two figures below. -->
-        <div class="case-study-gallery case-study-gallery--two" role="list" aria-label="Final high-fidelity mockups: one shared design shown with each audience's images, copy, and icons">
+        <!-- Final mockup gallery. The single Figma prototype sits inside a fixed-height
+             viewport; the full landing-page screenshot scrolls inside it so the reader
+             can browse the whole layout without the page itself getting overwhelmed. -->
+        <div class="case-study-gallery case-study-gallery--scroll" role="list" aria-label="Final high-fidelity Figma prototype of the redesigned Consultant Cafe landing page">
             <figure role="listitem">
-                <img src="assets/[PLACEHOLDER-consultantcafe-mockup-business].webp"
-                     alt="[PLACEHOLDER: Describe the business variant, e.g. 'High-fidelity mockup of the unified landing page with the business variant applied: business-focused hero imagery, ROI-led copy, and business-specific iconography throughout.']">
-                <figcaption>Same design, business variant.</figcaption>
-            </figure>
-            <figure role="listitem">
-                <img src="assets/[PLACEHOLDER-consultantcafe-mockup-individual].webp"
-                     alt="[PLACEHOLDER: Describe the individual variant, e.g. 'High-fidelity mockup of the unified landing page with the individual variant applied: warmer hero imagery, plain-language copy, and individual-focused iconography throughout.']">
-                <figcaption>Same design, individual variant.</figcaption>
+                <div class="case-study-gallery__viewport" tabindex="0" aria-label="Scroll to view the full landing page">
+                    <img src="assets/FigmaPrototypeBusiness.svg"
+                         alt="High-fidelity Figma prototype of the redesigned Consultant Cafe landing page, showing the hero, supporting sections, and CTAs through to the footer.">
+                </div>
+                <figcaption>High-fidelity landing page mockup.</figcaption>
             </figure>
         </div>
 
@@ -219,7 +217,7 @@
                 <ul>
                     <li><strong>Theme work in VS Code.</strong> Extended the existing Ghost theme with one new landing template, keeping the rest of the site untouched.</li>
                     <li><strong>Design-to-code fidelity.</strong> Rebuilt the Figma design as HTML and CSS, so the production page matches the mockup pixel-for-pixel.</li>
-                    <li><strong>Mobile-first, accessibility-first.</strong> Semantic markup, keyboard-reachable navigation, alt text, and ARIA labelling carried through from the design into the live theme.</li>
+                    <li><strong>Accessibility-first.</strong> Semantic markup, keyboard-reachable navigation, alt text, and ARIA labelling carried through from the design into the live theme.</li>
                     <li><strong>Editor-friendly.</strong> Structured the template so the Consultant Cafe team can swap between business and individual images, copy, and icons in the Ghost admin without breaking the layout.</li>
                 </ul>
             </section>

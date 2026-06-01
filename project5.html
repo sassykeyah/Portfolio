@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Urbeez - Saskia Day Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sep3hls.css">
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <div class="name">Saskia Day</div>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="project-library.html">Project Library</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content" class="project-detail">
+
+        <h1 class="case-study-title">Urbeez: Urban Gardening Community Platform</h1>
+
+        <!-- Metadata strip -->
+        <dl class="case-study-meta" aria-label="Project details">
+            <div class="case-study-meta__item">
+                <dt>Role</dt>
+                <dd>Designer &amp; Developer</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>University of Canberra</dt>
+                <dd>Designing for User Experience</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Year</dt>
+                <dd>2024</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Tools</dt>
+                <dd>Figma, FigJam, HTML, CSS, JavaScript</dd>
+            </div>
+            <div class="case-study-meta__item">
+                <dt>Status</dt>
+                <dd>High-fidelity prototype delivered</dd>
+            </div>
+        </dl>
+
+        <!-- At-a-glance overview -->
+        <p class="case-study-overview">
+            A coded prototype for an urban farming platform that pairs reliable horticultural information with an active community forum. Designed, tested, and built with Jonathan Stahl for Designing for UX at the University of Canberra.
+        </p>
+
+        <!-- Hero Section -->
+        <section class="case-study-hero" aria-label="Project hero image">
+            <img src="assets/Project5herothumbnail%20.png" alt="Mockup of the Urbeez urban gardening platform home page, showing the forum, library, and events together in a warm, earthy interface." class="case-study-image">
+        </section>
+
+        <!-- ===== Chapter 01: The Challenge (banded for emphasis) ===== -->
+        <div class="case-study-band">
+            <header class="case-study-chapter">
+                <span class="case-study-chapter__number">Chapter 01</span>
+                <h2 class="case-study-chapter__title">The challenge</h2>
+            </header>
+            <section class="case-study-section">
+                <p>The brief asked for a web platform that supports people interested in urban farming, with information, tools, and networking in one place. Looking at the existing options, users had to pick a side. Facebook urban gardening groups offered community but no way to check if the advice was reliable. Growcycle offered trustworthy information but no community at all. The challenge was to give users both.</p>
+                <p>Three things made it harder than a normal community site:</p>
+                <ul>
+                    <li>One platform had to serve experienced urban farmers and curious beginners side by side.</li>
+                    <li>The information had to feel trustworthy, and the community had to feel safe enough to ask basic questions.</li>
+                    <li>Users with low confidence in technology had to find the site easy from the first visit.</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- ===== Chapter 02: Ideation ===== -->
+        <header class="case-study-chapter">
+            <span class="case-study-chapter__number">Chapter 02</span>
+            <h2 class="case-study-chapter__title">Ideation</h2>
+        </header>
+
+        <section class="case-study-section">
+            <p>Ideation was the centre of this project. Research into existing platforms and users fed straight into an information architecture map and a SCAMPER brainstorm, which together shaped every feature that made it into the prototype.</p>
+        </section>
+
+        <div class="case-study-columns">
+            <div class="case-study-columns__col">
+                <h3>Research</h3>
+                <ul>
+                    <li>Built two personas from interviews with members of an urban farming Facebook group, one experienced, one new to urban farming.</li>
+                    <li>Studied Facebook groups and Growcycle to see what each got right, and what each missed.</li>
+                    <li>Mapped each persona's journey through the site to find friction before the design started.</li>
+                </ul>
+            </div>
+            <div class="case-study-columns__col">
+                <h3>Ideation</h3>
+                <ul>
+                    <li>Mapped the information architecture so the forum, library, and events live alongside each other, not buried in separate corners.</li>
+                    <li>Used SCAMPER to brainstorm features the existing platforms didn't have, including the badge system and direct messaging.</li>
+                    <li>Picked a warm, earthy colour and font system so less confident users would feel at home.</li>
+                </ul>
+            </div>
+            <div class="case-study-columns__col">
+                <h3>Build and test</h3>
+                <ul>
+                    <li>Coded the high-fidelity prototype in HTML, CSS, and JavaScript.</li>
+                    <li>Ran think-aloud usability tests with five participants aged 17 to 56, alongside the System Usability Scale.</li>
+                    <li>Both trials averaged in the mid-70s on the SUS, with no usability drop as participants got older.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Ideation artefacts. The two diagrams that drove every feature decision: the information architecture map and the SCAMPER brainstorm, shown side by side at full content width to match the columns above. -->
+        <div class="case-study-pair">
+            <div class="case-study-pair__col case-study-pair__col--zoom">
+                <h3>Information architecture</h3>
+                <a href="assets/InformationArchitectureProject5.JPG"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Open the Urbeez information architecture map at full size">
+                    <span class="zoom-hint" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <circle cx="11" cy="11" r="7"/>
+                            <line x1="21" y1="21" x2="16.5" y2="16.5"/>
+                            <line x1="11" y1="8" x2="11" y2="14"/>
+                            <line x1="8" y1="11" x2="14" y2="11"/>
+                        </svg>
+                        Click to expand
+                    </span>
+                    <img src="assets/InformationArchitectureProject5.JPG"
+                         alt="Hand-drawn information architecture map for the Urbeez platform, sketching how the home, forum, library, events, profile, and messages pages connect, with the shared navigation pulling each section into a single flow.">
+                </a>
+            </div>
+            <div class="case-study-pair__col case-study-pair__col--zoom">
+                <h3>SCAMPER brainstorm</h3>
+                <a href="assets/ScamperProject5.jpg"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Open the Urbeez SCAMPER brainstorm at full size">
+                    <span class="zoom-hint" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <circle cx="11" cy="11" r="7"/>
+                            <line x1="21" y1="21" x2="16.5" y2="16.5"/>
+                            <line x1="11" y1="8" x2="11" y2="14"/>
+                            <line x1="8" y1="11" x2="14" y2="11"/>
+                        </svg>
+                        Click to expand
+                    </span>
+                    <img src="assets/ScamperProject5.jpg"
+                         alt="Hand-drawn SCAMPER brainstorm for the Urbeez platform, working through Substitute, Combine, Adapt, Modify, Put to other use, Eliminate, and Rearrange to surface the features that the existing platforms didn't offer.">
+                </a>
+            </div>
+        </div>
+
+        <!-- ===== Chapter 03: What I delivered (banded for emphasis) ===== -->
+        <div class="case-study-band">
+            <header class="case-study-chapter">
+                <span class="case-study-chapter__number">Chapter 03</span>
+                <h2 class="case-study-chapter__title">What I delivered</h2>
+            </header>
+            <section class="case-study-section">
+                <ul>
+                    <li><strong>A coded mobile-first prototype.</strong> Seven pages built end to end. Home, About, Forum, Library, Events, Profile, and Messages.</li>
+                    <li><strong>A badge and reputation system.</strong> Plant-stage icons that grow with each user, so readers can see at a glance whose advice to trust.</li>
+                    <li><strong>A platform that tested well across ages.</strong> Both usability trials averaged 74+ on the SUS, with one tester saying, "OMG the whole thing is so cozy!"</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Final mockup gallery. Two finished screens from the high-fidelity prototype.
+             Each image sits inside a fixed-height crop frame at full width with the top
+             anchored to the top of the frame; the bottom of the screenshot clips off. -->
+        <div class="case-study-gallery case-study-gallery--two case-study-gallery--tall" role="list" aria-label="Two screens from the Urbeez high-fidelity prototype">
+            <figure role="listitem">
+                <div class="case-study-gallery__crop">
+                    <img src="assets/Mock1Urbeez.JPG"
+                         alt="Mockup of the Urbeez forum page, showing discussion threads, trending topics, and the badge icons next to each contributor.">
+                </div>
+                <figcaption>Forum and community view.</figcaption>
+            </figure>
+            <figure role="listitem">
+                <div class="case-study-gallery__crop">
+                    <img src="assets/Mock2Urbeez.JPG"
+                         alt="Mockup of the Urbeez events page, showing upcoming urban gardening events with dates, locations, and maps for each.">
+                </div>
+                <figcaption>Events view.</figcaption>
+            </figure>
+        </div>
+
+        <a href="project-library.html" class="case-study-next case-study-next--back" aria-label="Back to project library">
+            <span class="case-study-next__label">Back to</span>
+            <span class="case-study-next__title">Project library</span>
+        </a>
+
+        <!-- Lightbox modal. Populated and toggled by setupLightbox() in script.js. -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Full-size image viewer" hidden>
+            <button type="button" class="lightbox__close" aria-label="Close image viewer">&times;</button>
+            <img class="lightbox__image" src="" alt="">
+        </div>
+    </main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-main">
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="project-library.html">Project Library</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="footer-cta">
+                <p class="footer-cta-label">Let's connect</p>
+                <a href="mailto:saskiaday@hotmail.com" class="footer-email">saskiaday@hotmail.com</a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2026 Saskia Day. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

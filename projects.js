@@ -6,7 +6,7 @@ const PROJECTS = [
     summary: "An interactive narrative built in 24 hours, exploring digital disconnection through the metaphor of 404 errors.",
     thumbnail: "assets/404-not-found.webp",
     thumbnailAlt: "Collation of screenshots from the 404: Page Not Found project showing a dark console-style interactive interface",
-    year: "2024",
+    year: "2025",
     featured: true,
     href: "project1.html"
   },
@@ -17,7 +17,7 @@ const PROJECTS = [
     summary: "An interactive timeline pairing Australia's historical moments with the most popular ARIA songs of each year.",
     thumbnail: "assets/spotify-rewind.webp",
     thumbnailAlt: "Screenshot of the Spotify Rewind home page showing a retro 80s-style interactive timeline",
-    year: "2024",
+    year: "2025",
     featured: true,
     href: "project2.html"
   },
@@ -28,7 +28,7 @@ const PROJECTS = [
     summary: "Tactile chamber maps commissioned by the Parliamentary Education Office for visitors who are vision impaired.",
     thumbnail: "assets/tactile-maps.webp",
     thumbnailAlt: "Tactile maps of the House of Representatives and Senate chambers with raised textures and braille labels",
-    year: "2024",
+    year: "2025",
     featured: true,
     href: "project3.html"
   },
@@ -42,6 +42,17 @@ const PROJECTS = [
     year: "2026",
     featured: true,
     href: "project4.html"
+  },
+  {
+    id: "urbeez",
+    type: "web",
+    title: "Urbeez: Urban Gardening Community Platform",
+    summary: "A coded high-fidelity prototype for an urban farming community, pairing reliable horticultural information with an active forum.",
+    thumbnail: "assets/Project5herothumbnail%20.png",
+    thumbnailAlt: "Preview of the Urbeez urban gardening platform, showing the home page with community forum, library, and events together",
+    year: "2024",
+    featured: true,
+    href: "project5.html"
   }
 ];
 

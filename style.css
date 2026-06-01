@@ -477,6 +477,25 @@ button:focus,
     }
 }
 
+/* Narrow variant for ideation sketches and diagrams that look blurry when
+   blown up to the full 1800px content width (hand-drawn IA maps, SCAMPER
+   worksheets, etc). Caps the container so each image renders close to native
+   size, both when single-column on mobile and when side-by-side on desktop. */
+.case-study-pair--narrow {
+    max-width: 1400px;
+}
+
+/* Project 5 (Urbeez) hero/thumbnail: show the full device mockup without
+   cropping. The source image already sits on a sage-green backdrop, so we
+   match that as the container background and any pillarboxing on the sides
+   reads as the same scene. Tweak --urbeez-green if it doesn't match exactly. */
+.case-study-image[src*="Project5herothumbnail"],
+.project-card__image[src*="Project5herothumbnail"] {
+    object-fit: contain;
+    object-position: center;
+    background: #929c74;
+}
+
 /* When a pair column wraps an image (e.g. a journey map paired with its summary),
    inherit the gallery's rounded/shadowed treatment. The wrapping <a> stays a block
    so the click target covers the whole image. */
@@ -771,6 +790,80 @@ button:focus,
         object-fit: cover;
         object-position: left center;
     }
+}
+
+/* Tall variant for mockup tiles. Each image lives inside a fixed-height crop
+   frame: the image renders at 100% width with its natural aspect ratio, the
+   top of the image sits flush with the top of the frame, and anything below
+   the frame's height clips off. No width is ever cropped. Applies at all
+   breakpoints and overrides any sibling sizing rules. */
+.case-study-gallery--tall .case-study-gallery__crop {
+    height: clamp(380px, 55vh, 620px);
+    overflow: hidden;
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow-medium);
+    background: var(--light-color, #fff);
+}
+
+.case-study-gallery--tall .case-study-gallery__crop img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: auto;
+    object-fit: initial;
+    object-position: initial;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
+}
+
+/* Scroll-in-viewport variant for tall mockups (full landing-page screenshots).
+   Each tile becomes a fixed-height window; the image keeps its natural aspect
+   ratio and the reader scrolls vertically inside the frame to see the full
+   layout. Overrides the cropping rules above. */
+.case-study-gallery--scroll .case-study-gallery__viewport {
+    height: clamp(420px, 65vh, 720px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow-medium);
+    background: var(--light-color, #fff);
+    scrollbar-gutter: stable;
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(47, 79, 31, 0.45) transparent;
+}
+
+/* Chromium / WebKit scrollbar — thin pill thumb in the brand green, sitting
+   on a transparent track so it disappears against the page. */
+.case-study-gallery--scroll .case-study-gallery__viewport::-webkit-scrollbar {
+    width: 8px;
+}
+.case-study-gallery--scroll .case-study-gallery__viewport::-webkit-scrollbar-track {
+    background: transparent;
+}
+.case-study-gallery--scroll .case-study-gallery__viewport::-webkit-scrollbar-thumb {
+    background: rgba(47, 79, 31, 0.45);
+    border-radius: 999px;
+}
+.case-study-gallery--scroll .case-study-gallery__viewport::-webkit-scrollbar-thumb:hover {
+    background: rgba(47, 79, 31, 0.7);
+}
+
+.case-study-gallery--scroll .case-study-gallery__viewport:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+.case-study-gallery--scroll .case-study-gallery__viewport img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: auto;
+    object-fit: initial;
+    object-position: initial;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 /* Pull quote — full-width centered moment that punctuates the narrative. */
